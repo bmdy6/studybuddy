@@ -2,6 +2,8 @@
 
 前端：在 `studybuddy-client` 运行 `npm test`、`npm run lint`、`npm run typecheck`、`npm run build`。已有微信组件测试显式启用集成；应用默认仍关闭，配置测试单独覆盖默认行为。
 
+后端脚本校验需要 `ripgrep`（`rg`）；中文 PDF 用例还需要系统中文字体。Linux / Ubuntu 可先安装 `sudo apt-get update && sudo apt-get install -y ripgrep fonts-wqy-microhei`。该字体包提供现有 PDF fixture 检测的 `wqy-microhei.ttc`。其他系统请安装 `ripgrep` 和可用的中文字体；缺字体时 PDF 用例会跳过，`pytest -rs` 可显示实际跳过原因。
+
 后端测试需要独立的本地 MySQL 测试库。先创建空库（名称必须以 `_test` 结尾），以该库的连接配置运行 `scripts/init_db.py`。测试入口拒绝远程地址、非测试库名和未显式授权的环境：
 
 ```bash
@@ -20,7 +22,7 @@ export WECHAT_OFFICIAL_ACCOUNT_QR_URL=https://example.invalid/qr
 export WECHAT_ACCESS_TOKEN_URL=https://example.invalid/token
 export WECHAT_CUSTOMER_MESSAGE_URL=https://example.invalid/message
 PYTHONPATH=. .venv/bin/python scripts/init_db.py
-PYTHONPATH=. .venv/bin/python -m pytest -q -o addopts=''
+PYTHONPATH=. .venv/bin/python -m pytest -q -rs -o addopts=''
 ```
 
 默认测试清空模型密钥，使用合成 fixture 和模型替身，不证明模型教学效果。SSE 测试需要提交合成登录账号供独立连接访问，因此务必使用一次性测试库；测试完成后可删除自己创建的库。
