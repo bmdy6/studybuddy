@@ -41,9 +41,13 @@ jobs:
           python-version: "3.11"
           cache: pip
           cache-dependency-path: studybuddy-backend/requirements.txt
+      - name: Install test system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ripgrep fonts-wqy-microhei
       - run: python -m pip install -r requirements.txt
       - run: python scripts/init_db.py
-      - run: python -m pytest -q -o addopts=''
+      - run: python -m pytest -q -rs -o addopts=''
   frontend:
     runs-on: ubuntu-latest
     defaults:
