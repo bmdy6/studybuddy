@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 150
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 150
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

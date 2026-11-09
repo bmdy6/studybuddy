@@ -1,0 +1,127 @@
+brand:
+  name: 知了
+  name_en: ""
+
+llm:
+  provider: mimo
+  model: mimo-v2.5
+  timeout_seconds: 60
+  retry_count: 2
+  retry_backoff_base: 1.5
+  circuit_fail_threshold: 5
+  circuit_reset_seconds: 120
+  reasoning_effort: none
+
+agent:
+  tool_timeout_seconds: 8
+
+  # 正式试卷路由（create_practice_exam）：意图词与科目代码；正则组合留代码
+  practice_exam:
+    route_keywords: ["卷子", "试卷", "套卷"]
+    query_exclusion_keywords: ["看看", "我的", "之前", "历史", "在哪", "找一下", "找找", "查询"]
+    subject_codes: ["math", "english", "chinese"]
+
+  # 对话轻练（grade_light_answer）：触发/退出词与题数边界
+  light_practice:
+    trigger_keywords: ["练几道", "考我一道", "考我几道", "随便问", "随便出", "出几道", "来几道", "口算", "这里我懂了吗", "考考我"]
+    exit_keywords: ["卷子", "试卷", "套卷", "套题", "不练了", "不练", "结束", "停下", "去做别的", "休息", "正式练习", "做计划"]
+    min_questions: 1
+    max_questions: 3
+
+  # 学习档案：科目代码 → 展示标签
+  profile:
+    subject_labels:
+      chinese: "语文"
+      math: "数学"
+      english: "英语"
+      pe: "体育"
+
+  # 计划草案守卫：敏感轮触发词与目标/时长提问形状
+  plan_guard:
+    negotiation_keywords: ["计划", "草案", "安排", "今天学", "分钟", "改成", "不要这个"]
+    goal_question_hints: ["具体目标", "想重点", "想提升", "打算", "多久", "多长时间", "多少时间", "内容偏好", "偏好", "指定素材", "想学什么", "学什么", "重点学"]
+
+  # 教材诚实守卫：敏感轮触发词与证据/安全提示词
+  textbook_guard:
+    sensitive_keywords: ["课本", "教材", "语文书", "英语书", "数学书", "课文", "上册", "下册", "人教版", "部编版", "苏教版", "译林版", "北师大版"]
+    uncertainty_hints: ["无法确认", "无法核验", "不确定", "不能确认", "可能", "请核对", "暂不能"]
+    question_hints: ["？", "?", "是否", "是不是", "哪篇", "哪一课", "哪课", "谁写的", "作者是谁"]
+    ocr_attribution_hints: ["根据你上传", "识别结果", "图片识别", "识别到"]
+    unconfirmed_safety_hints: ["可能", "请核对", "核对", "不确定", "暂定", "识别到", "可能有误"]
+
+app:
+  log_level: INFO
+  public_upload_base_path: /uploads
+
+wechat:
+  bind_expire_seconds: 180
+  customer_message_window_hours: 48
+  timezone: Asia/Shanghai
+  api_timeout_seconds: 10
+  bot_api_timeout_seconds: 10
+  bot_proactive_message_limit: 2
+  guardian_push_time_options:
+    - "20:00"
+    - "21:00"
+  guardian_default_push_time: "20:30"
+  growth_evidence_limit: 20
+  growth_summary_max_tokens: 800
+  daily_record_summary_max_tokens: 1200
+
+chat_context:
+  max_chars: 24000
+  recent_turns: 8
+  summary_max_chars: 3500
+  message_max_chars: 4000
+  tool_max_chars: 2000
+
+question_bank:
+  bili_search_page_size: 10
+  bili_search_top_n: 3
+  bili_search_timeout_seconds: 15
+  search_timeout_seconds: 12
+  review_timeout_seconds: 15
+  official_source_site_seeds:
+    苏州工业园区:
+      - name: 苏州工业园区教育局
+        domain: edu.sipac.gov.cn
+        source_adapter: education_bureau
+      - name: 苏州工业园区教师发展中心
+        domain: tdc.sipedu.cn
+        source_adapter: education_bureau
+      - name: 苏州工业园区教师发展中心-通知公告
+        domain: tdc.sipedu.cn
+        source_adapter: education_bureau
+        url: https://tdc.sipedu.cn/gsgg/tzgg
+      - name: 苏州工业园区教师发展中心-教学研究
+        domain: tdc.sipedu.cn
+        source_adapter: education_bureau
+        url: https://tdc.sipedu.cn/jxyj
+      - name: 苏州工业园区教师发展中心-监测评价
+        domain: tdc.sipedu.cn
+        source_adapter: education_bureau
+        url: https://tdc.sipedu.cn/jydd
+      - name: 苏州工业园区管委会
+        domain: sipac.gov.cn
+        source_adapter: education_bureau
+        url: https://www.sipac.gov.cn/
+    苏州:
+      - name: 苏州市教育局
+        domain: jyj.suzhou.gov.cn
+        source_adapter: education_bureau
+      - name: 苏州市人民政府
+        domain: suzhou.gov.cn
+        source_adapter: official_edu
+        url: http://www.suzhou.gov.cn/
+
+bilibili_assist:
+  enabled: true
+  transcript_max_chars: 30000
+  audio_max_seconds: 300
+  api_timeout_seconds: 15
+  transcribe_total_timeout_seconds: 40
+  bili_cli_path: bili
+  bili_cli_timeout_seconds: 180
+  groq_timeout_seconds: 60
+  groq_model: whisper-large-v3
+  concurrent_segments: 4

@@ -1,0 +1,1 @@
+用户明确要求做正式试卷（自练卷），本轮必须调用 create_practice_exam 生成自练卷并分发：title/subject/questions 按用户要求生成（subject 取工具 schema 允许的科目，用户未指定时按最近学习科目或出综合卷并说明）；每题含 type/stem/options/answer/score/knowledge_tags/grading，feedback_mode 默认 immediate。禁止：对话轻练（grade_light_answer）、口头追问科目代替出卷、查计划/查错题本代替出卷。生成后在正文告诉学生点卡片开始作答。

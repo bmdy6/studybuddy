@@ -1,0 +1,30 @@
+{
+  "openapi": "3.1.0",
+  "info": {"title": "studybuddy", "version": "1.0.0"},
+  "paths": {
+    "/api/question-bank/papers": {
+      "get": {
+        "summary": "List papers",
+        "responses": {"200": {"description": "OK"}}
+      }
+    },
+    "/api/question-bank/sources": {
+      "get": {
+        "summary": "List sources",
+        "responses": {"200": {"description": "OK"}}
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PaperOut": {
+        "type": "object",
+        "properties": {"id": {"type": "integer"}}
+      },
+      "SourceOut": {
+        "type": "object",
+        "properties": {"id": {"type": "integer"}}
+      }
+    }
+  }
+}
