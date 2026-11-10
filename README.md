@@ -59,7 +59,7 @@ npm run dev -- --host 127.0.0.1
 
 <!-- readme-illustrate:steps -->
 <table>
-<tr><td align="center"><a href="docs/images/plan-confirm.png"><img src="docs/images/plan-confirm.png" alt="查看两项计划草案并确认创建" width="250"></a><br>确认任务与预计时间。</td><td align="center"><a href="docs/images/task-session.png"><img src="docs/images/task-session.png" alt="任务会话中保留的作答与下一次练习起点" width="250"></a><br>保留作答与下一步练习。</td><td align="center"><a href="docs/images/resume.png"><img src="docs/images/resume.png" alt="计划列表中的继续学习与完成状态" width="250"></a><br>继续未完成任务。</td></tr>
+<tr><td align="center"><a href="docs/images/plan-confirm.png"><img src="docs/images/plan-confirm.png" alt="查看两项计划草案并确认创建" width="250"></a><br>确认任务与预计时间。</td><td align="center"><a href="docs/images/task-session.png"><img src="docs/images/task-session.png" alt="任务会话中保留的作答与下一次练习起点" width="250"></a><br>保留作答与下一步练习。</td><td align="center"><a href="docs/images/resume.png"><img src="docs/images/resume.png" alt="计划列表中的任务与完成状态" width="250"></a><br>查看未完成计划。</td></tr>
 </table>
 <!-- /readme-illustrate:steps -->
 ## 模型配置
