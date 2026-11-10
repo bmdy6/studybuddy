@@ -4,6 +4,11 @@
 
 源码采用 [AGPL-3.0-only](LICENSE)，保留原有 PDF 处理能力。模型服务需使用自己的账号与密钥，并承担相应调用费用。
 
+<!-- readme-illustrate:overview -->
+<img src="docs/images/overview.png" alt="学习页中的计划与继续入口" width="838">
+
+真实本地界面，使用虚构账号与预填计划；不代表模型教学效果。
+<!-- /readme-illustrate:overview -->
 ## 一次学习如何接续
 
 1. **确认计划**：Agent 先保存带版本号的计划草案，学生查看并点击「确认并创建」，服务端用这份草案生成计划，重复确认不会重复建计划。
@@ -11,6 +16,21 @@
 3. **保留作答证据**：完成判定需要附带学生作答证据，写入判定记录后才更新任务状态。AI 判断仍需核对，不等于已经掌握知识。
 4. **继续未完成内容**：可以恢复任务会话，也可以把未完成计划沿用到今天。这里没有承诺精确恢复每一个教学步骤。
 
+<!-- readme-illustrate:plan-confirm -->
+<img src="docs/images/plan-confirm.png" alt="查看两项计划草案并确认创建" width="838">
+
+步骤 1：真实应用中的「确认并创建」卡片。草案与对话为预填合成数据，未调用模型。
+<!-- /readme-illustrate:plan-confirm -->
+<!-- readme-illustrate:task-session -->
+<img src="docs/images/task-session.png" alt="任务会话中保留的作答与下一次练习起点" width="838">
+
+步骤 2：真实任务会话读取虚构作答及预填反馈；这份演示判定不代表已经掌握。
+<!-- /readme-illustrate:task-session -->
+<!-- readme-illustrate:resume -->
+<img src="docs/images/resume.png" alt="计划列表中的继续学习与完成状态" width="838">
+
+步骤 3：从计划列表找到未完成任务的继续入口。这里展示预填状态，未执行实时教学或跨日沿用。
+<!-- /readme-illustrate:resume -->
 此外包含笔记、素材解析、练习与错题、学习记录、家庭任务等已有模块。微信、腾讯云 COS、视频转写和外部题源检索均需另行配置；默认不启用微信，未配置 COS 时使用本地文件存储。独立微信 Bot 服务与原部署环境不在本仓库中。
 
 ## 本地启动

@@ -1,0 +1,80 @@
+{
+  "images": [
+    {
+      "id": "overview",
+      "readme": "README.md",
+      "file": "docs/images/overview.png",
+      "alt": "学习页中的计划与继续入口",
+      "caption": "真实本地界面，使用虚构账号与预填计划；不代表模型教学效果。",
+      "width": 838,
+      "source": {
+        "kind": "web-app",
+        "command": "node /path/to/skill-readme-from-code/scripts/run.mjs capture --type web-app --repo . --work WORK --id learning --brief docs/images/capture-brief.json",
+        "data": "docs/images/seed-demo.py: disposable MySQL readme_demo_test, fictional student, prefilled plan draft/task history/answer record; no model calls",
+        "url": "http://127.0.0.1:15173/#/study-plans",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "sha256": "61754d940df66c967c33502eb531df5c2dca475599070062804b9b33297443f7"
+      }
+    },
+    {
+      "id": "plan-confirm",
+      "readme": "README.md",
+      "file": "docs/images/plan-confirm.png",
+      "alt": "查看两项计划草案并确认创建",
+      "caption": "步骤 1：真实应用中的「确认并创建」卡片。草案与对话为预填合成数据，未调用模型。",
+      "width": 838,
+      "source": {
+        "kind": "web-app",
+        "command": "node /path/to/skill-readme-from-code/scripts/run.mjs capture --type web-app --repo . --work WORK --id learning --brief docs/images/capture-brief.json",
+        "data": "docs/images/seed-demo.py: disposable MySQL readme_demo_test, fictional student, prefilled plan draft/task history/answer record; no model calls",
+        "url": "http://127.0.0.1:15173/#/chat",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "sha256": "663da82a0410b65bfba2acdaa26bc7b24af2894493c17cadb7357748b7cc0aa6"
+      }
+    },
+    {
+      "id": "task-session",
+      "readme": "README.md",
+      "file": "docs/images/task-session.png",
+      "alt": "任务会话中保留的作答与下一次练习起点",
+      "caption": "步骤 2：真实任务会话读取虚构作答及预填反馈；这份演示判定不代表已经掌握。",
+      "width": 838,
+      "source": {
+        "kind": "web-app",
+        "command": "node /path/to/skill-readme-from-code/scripts/run.mjs capture --type web-app --repo . --work WORK --id learning --brief docs/images/capture-brief.json",
+        "data": "docs/images/seed-demo.py: disposable MySQL readme_demo_test, fictional student, prefilled plan draft/task history/answer record; no model calls",
+        "url": "http://127.0.0.1:15173/#/chat",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "sha256": "150ee36bd025e3c3ba0febf542572674f0397f1539be35f1bc6d54081940a866"
+      }
+    },
+    {
+      "id": "resume",
+      "readme": "README.md",
+      "file": "docs/images/resume.png",
+      "alt": "计划列表中的继续学习与完成状态",
+      "caption": "步骤 3：从计划列表找到未完成任务的继续入口。这里展示预填状态，未执行实时教学或跨日沿用。",
+      "width": 838,
+      "source": {
+        "kind": "web-app",
+        "command": "node /path/to/skill-readme-from-code/scripts/run.mjs capture --type web-app --repo . --work WORK --id learning --brief docs/images/capture-brief.json",
+        "data": "docs/images/seed-demo.py: disposable MySQL readme_demo_test, fictional student, prefilled plan draft/task history/answer record; no model calls",
+        "url": "http://127.0.0.1:15173/#/study-plans/all",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "sha256": "31a089df0dac95869194a3d34f113b15636be61ca8a828a3ee9e51030a2bae8a"
+      }
+    }
+  ]
+}
