@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --sb-color-primary: #1f6f68;
+  --sb-color-primary-deep: #174f4b;
+  --sb-color-accent: #b48a5a;
+  --sb-color-success: #34c759;
+  --sb-color-error: #ff3b30;
+  --sb-color-warning: #ff9500;
+  --sb-color-warning-deep: #7a5b11;
+  --sb-color-text: #20211f;
+  --sb-color-text-secondary: #6f746f;
+  --sb-color-text-tertiary: #959891;
+  --sb-color-text-placeholder: #c0c0c0;
+  --sb-color-white: #ffffff;
+  --sb-color-bg-app: #efeee8;
+  --sb-color-bg-layout: #f4f1e9;
+  --sb-color-bg-muted: #ebe7dc;
+  --sb-color-bg-reasoning: #f7f6f2;
+  --sb-color-bg-primary-soft: #e7f0ed;
+  --sb-color-bg-warning-soft: #fff8e1;
+  --sb-color-border: #d2d2d7;
+  --sb-color-border-secondary: #e5e5ea;
+  --sb-color-border-warm: #ded8ca;
+  --sb-color-border-warning: #ffe082;
+  --sb-shadow-card: 0 1px 2px rgba(30, 28, 22, 0.04), 0 10px 30px rgba(30, 28, 22, 0.06);
+  --sb-shadow-floating: 0 12px 34px rgba(30, 28, 22, 0.1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--sb-color-bg-app);
+  color: var(--sb-color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--sb-color-primary);
+}
+
+/* 主按钮触控高度达标（验收标准：至少 40px） */
+.ant-btn {
+  min-height: 40px;
+}
+
+/* 消息气泡 */
+.sb-bubble {
+  border-radius: 14px;
+  padding: 10px 14px;
+  max-width: 84%;
+  word-break: break-word;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.sb-bubble--user {
+  background: var(--sb-color-primary);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.sb-bubble--assistant {
+  background: var(--sb-color-white);
+  color: var(--sb-color-text);
+  border: 1px solid var(--sb-color-border-secondary);
+  border-bottom-left-radius: 4px;
+}
+
+.sb-bubble a {
+  color: var(--sb-color-primary);
+  text-decoration: underline;
+}

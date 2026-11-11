@@ -1,16 +1,30 @@
-# README image sources
+# 截图来源与复现
 
-Four screenshots from the real React → FastAPI → isolated MySQL 9.1 application, using hand-authored synthetic plans, dialogue and feedback; no model calls. The draft and task are separate fixture plans.
+本次所有应用截图都由真实 React → FastAPI → 独立 MySQL 8.4 页面生成。种子只有手写的虚构计划、对话、作答、判定和回顾，不调用模型；草案与已有任务是两个独立 fixture，不能把预填对话当作本次模型教学结果。
 
-| Image | Route | Viewport | SHA-256 |
-| --- | --- | --- | --- |
-| overview.png | http://127.0.0.1:15173/#/study-plans | 1280×800 | `61754d940df66c967c33502eb531df5c2dca475599070062804b9b33297443f7` |
-| plan-confirm.png | http://127.0.0.1:15173/#/chat | 1280×800 | `6c3cd1691053234f16231a2d4c802364fca37d79d2e1d9f47e566f6cba1b6b64` |
-| task-session.png | http://127.0.0.1:15173/#/chat | 1120×650 | `abc1b9845a41213729e70d255387517b70e700165e6998236f5f61310baa1e7c` |
-| resume.png | http://127.0.0.1:15173/#/study-plans/all | 1280×800 | `2434a536fb33015f3021797027ced678510bb27674501653d06769c31aa9631e` |
+- `overview.png`：桌面学习页，1440×900。
+- `plan-confirm.png`：桌面聊天页中的两项计划草案，1280×800。
+- `task-session.png`：桌面任务对话与作答，1280×800。
+- `resume.png`：计划管理页，1280×800。
+- `mobile-task.png`、`mobile-plan.png`、`mobile-notes.png`：手机端真实页面，390×844。
+- `wechat-daily-demo.png`：**微信聊天示意**；`build_parent_daily_summary` 从虚构家长与学生关系、3 项完成任务、3 条时长反馈、2 个薄弱点、错题复盘和 86 分试卷生成正文，Playwright 将文本渲染为气泡。不是微信实际投递截图。
+- `wechat-conversation-demo.png`：**微信对话示意**；家长问「今天学得怎么样」后，先展示 `build_guardian_today_learning_summary` 的真实输出，再展示 `build_parent_daily_summary` 的晚间日报；虚构数据说明只在气泡外，两张图分别用于 README 功能表格和微信章节。
+- `parent-summary.txt`、`parent-query.txt`：种子脚本直接保存的服务输出，不由截图脚本编写；时长来自学生自报，不以计划预计分钟冒充实际用时。
+- `landing.png`：本次恢复的官网真实页面，1440px；Hero 中三张图同样来自上述合成数据手机页面。
 
-Reproduce in a new disposable local database named `readme_demo_test`: install dependencies and initialize with `PYTHONPATH=. .venv/bin/python scripts/init_db.py`, then run `PYTHONPATH=. .venv/bin/python ../docs/images/seed-demo.py` from studybuddy-backend. The script creates only fictional records and ignored browser states. Set the database host to 127.0.0.1, a dedicated local port/account, blank LLM_API_KEY, LLM_BASE_URL=http://127.0.0.1:9 and WECHAT_ENABLED=false. Start FastAPI on 18011 and Vite on 15173 with VITE_API_BASE=http://127.0.0.1:18011; load the routes above with the script's plan/task storage states in headless Chromium.
+`capture-receipt.json` 记录 Chromium 版本、应用路由、视口和图片 SHA-256。`illustrate.json` 是本次文件清单，替换旧的 README 插图块说明。
 
-Capture command: `node /path/to/skill/scripts/run.mjs capture --type web-app --repo . --work WORK --id learning --brief WORK/brief.json`. The brief supplies setup, service commands/readiness, routes, viewports and storage-state paths. Keep that brief, capture receipt and README previews outside the repository; stop owned services after capture.
+`readme-github.png`、`readme-github-features.png`、`readme-github-architecture.png` 是 GitHub 分支 README 的实际渲染截图（公开页面、未登录），分别记录首屏、表格与 Mermaid；与应用截图分别使用。
 
-The compact illustrate.json records baseline commit/blob references, hashes and insertion fields. Verify uses git show to compare original README bytes after removing declared blocks. Baseline installation was already below the desktop fold; report it as a warning.
+## 复现
+
+新建一次性 MySQL 实例和空库 `readme_demo_test`，专用本机端口及账号。不要使用任何已有个人或生产数据库。
+
+1. 按根 README 安装主后端与客户端依赖。
+2. 在后端导出 `DB_HOST=127.0.0.1`、独立 `DB_PORT/DB_USER/DB_PASSWORD`、`DB_NAME=readme_demo_test`、合成 `JWT_SECRET`、`WECHAT_ENABLED=false`、空 `LLM_API_KEY`、`LLM_BASE_URL=http://127.0.0.1:9`、`CORS_ORIGINS=http://127.0.0.1:15183`。
+3. 在后端运行 `PYTHONPATH=. .venv/bin/python scripts/init_db.py`，然后 `PYTHONPATH=. .venv/bin/python ../docs/images/seed-demo.py`。脚本拒绝非指定本机数据库与已有用户。
+4. 后端启动在 `127.0.0.1:18083`；客户端设置 `VITE_API_BASE=http://127.0.0.1:18083`，启动在 `127.0.0.1:15183`。
+5. 仓库根目录执行 `node docs/images/capture-demo.mjs`，使用 headless Chromium。必要时先在客户端目录执行 `npx playwright install chromium`。
+6. 官网设置 `VITE_APP_URL=http://127.0.0.1:15183` 并启动在 `127.0.0.1:15184`；执行 `node docs/images/smoke-demo.mjs` 验证 UI 确认计划、导航后持久化、手机端任务刷新、微信关闭时主流程，以及官网四个断点。这一步会消费种子草案，重新执行需重建**自己的一次性演示库**。
+
+生成的 `*-state.private.json` 含合成账号登录 token，已被忽略，不提交。完成后停止本次服务并销毁临时 MySQL。原 landing-public 的旧截图和二维码均未搬，官网引用本次新截图副本。

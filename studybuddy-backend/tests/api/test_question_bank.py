@@ -77,7 +77,7 @@ def test_create_paper_source_saves_manual_official_candidate(client: TestClient)
         "/api/question-bank/paper-sources",
         headers={"Authorization": f"Bearer {token}"},
         json={
-            "title": "至和实验学校官网八年级数学期中练习",
+            "title": "示例学校官网八年级数学期中练习",
             "source_url": "https://www.example.edu.cn/jiaowu/math8-mid.pdf",
             "snippet": "学校官网 教务",
             "city": "苏州",

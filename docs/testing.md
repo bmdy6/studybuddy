@@ -30,3 +30,22 @@ PYTHONPATH=. .venv/bin/python -m pytest -q -rs -o addopts=''
 真实体验可以使用完全虚构的分数运算场景：提出两个短任务的计划、确认草案、进入第一项、回答问题并检查证据记录、重新打开任务、把未完成项目沿用到今天。核对数据库结果与界面，不只检查 HTTP 状态。不要上传真实学生数据来演示。
 
 真实模型调用、数据库版本、浏览器和 Docker 的验证范围以具体交付记录为准，不能用模拟结果替代。
+
+## 微信 Bot、官网和 HobbyBuddy
+
+Bot 必须使用独立虚拟环境（`hermes-agent` 的 `httpx` 等固定版本与主后端不同），不要合并两份 requirements 到同一环境：
+
+```bash
+# 仓库根目录
+python3.11 -m venv wechat_bot_service/.venv
+wechat_bot_service/.venv/bin/python -m pip install -r wechat_bot_service/requirements.txt pytest pytest-asyncio
+wechat_bot_service/.venv/bin/python -m pytest wechat_bot_service/tests -q
+```
+
+Bot 测试使用本机 aiohttp 测试服务器和合成 iLink/账号适配器，不扫码、不读取个人 Hermes 凭据、不调用真实微信。
+
+官网在 `studybuddy-client` 执行 `npm run build:landing`；产物独立于主应用。
+
+HobbyBuddy 后端测试：仓库根目录设置 `PYTHONPATH=studybuddy-backend:hobbybuddy/backend`，使用后端测试依赖运行 `python -m pytest hobbybuddy/backend/tests -q`。数据库夹具是 SQLite 内存库，模型与资源搜索用替身。客户端在 `hobbybuddy/client` 执行 `npm ci`、`npm run lint`、`npm run typecheck`、`npm run build`，当前没有独立前端 test 脚本；`lint` 实际为 TypeScript 检查。
+
+完整后端测试会收集 `tests/live/` 并默认跳过。只有明确授权真实模型、设定调用预算时才可以使用 `--run-live`；本次交付不运行它们。

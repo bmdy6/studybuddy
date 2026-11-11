@@ -2,7 +2,7 @@
 
 用法：
   PYTHONPATH=. .venv/bin/python scripts/audit_question_bank_sources.py \
-    --city 苏州 --district 苏州工业园区 --school 苏州工业园区至和实验学校 \
+    --city 苏州 --district 苏州工业园区 --school 示例学校 \
     --grade 八年级 --semester 上册 --subject 数学 --exam-type 期中 --limit 12
 
 脚本只搜索和统计，不写数据库。

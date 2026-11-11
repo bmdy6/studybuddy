@@ -1,0 +1,75 @@
+{
+  "browser": "149.0.7827.55",
+  "synthetic": true,
+  "modelCalls": 0,
+  "shots": [
+    {
+      "name": "overview",
+      "route": "/#/study-plans",
+      "width": 1440,
+      "height": 900,
+      "sha256": "718d2283ae9509a2d266771cade4e2716f781771849e214260edf4c16b525cb0"
+    },
+    {
+      "name": "plan-confirm",
+      "route": "/#/chat",
+      "width": 1280,
+      "height": 800,
+      "sha256": "b93e3a23ad2790196002bfed8ce558fd27fc9e3a11cd0196cf754495ef172e8f"
+    },
+    {
+      "name": "task-session",
+      "route": "/#/chat",
+      "width": 1280,
+      "height": 800,
+      "sha256": "6a3ced0a677d577ac75cd8053d8c79e3ffe3f3a87376aead91f9f776c4731c50"
+    },
+    {
+      "name": "resume",
+      "route": "/#/study-plans/all",
+      "width": 1280,
+      "height": 800,
+      "sha256": "28341a3e9218cfefa7e9d6cae99f7306ca59a343a160a49824c1092de1ad3d9e"
+    },
+    {
+      "name": "mobile-task",
+      "route": "/#/chat",
+      "width": 390,
+      "height": 844,
+      "sha256": "89058b951bfcc37b46780bafc8bf00fce17c256d09f599d26081c69f16da6bb9"
+    },
+    {
+      "name": "mobile-plan",
+      "route": "/#/study-plans",
+      "width": 390,
+      "height": 844,
+      "sha256": "7fbea5570f2414c9c58a3efcd6ff807a0e1b6ff5aba08616b75b2f28e6d1aa5e"
+    },
+    {
+      "name": "mobile-notes",
+      "route": "/#/notes",
+      "width": 390,
+      "height": 844,
+      "sha256": "201d8f06547c7d8af6397052856686adb5db87365b907d614ee81c6400233a2e"
+    },
+    {
+      "name": "wechat-daily-demo",
+      "source": [
+        "build_parent_daily_summary"
+      ],
+      "width": 640,
+      "height": 741,
+      "sha256": "b85381db7f0fcfc1dd6ddad770732adff87cc2b112df30f870f568bca68675e7"
+    },
+    {
+      "name": "wechat-conversation-demo",
+      "source": [
+        "build_guardian_today_learning_summary",
+        "build_parent_daily_summary"
+      ],
+      "width": 640,
+      "height": 1089,
+      "sha256": "683fbe7b7e61c9762f9d9c16ca05d9e7c119a8e42b63085699527d7995f7172d"
+    }
+  ]
+}

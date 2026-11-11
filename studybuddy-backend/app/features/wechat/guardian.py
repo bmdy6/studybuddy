@@ -18,7 +18,9 @@ from app.models.wechat import (
     WechatGuardianStudentContext,
 )
 from app.core.auth import access_service
-from app.features.growth import supervision_service
+from app.features.growth import supervision_service, guardian_today
+from app.models.exam import Exam
+from app.models.exam_record import ExamRecord
 from app.features.chat import sessions
 from app.features.wechat.messaging import send_ilink_text
 
@@ -134,7 +136,7 @@ def _is_guardian_today_learning_query(content: str) -> bool:
         return True
     return has_today and any(
         keyword in normalized
-        for keyword in ("学了什么", "学习了什么", "学习内容", "学习的内容", "做了什么", "学什么")
+        for keyword in ("学了什么", "学习了什么", "学习内容", "学习的内容", "做了什么", "学什么", "学得怎么样")
     )
 
 
@@ -149,14 +151,29 @@ def build_parent_daily_summary(db: Session, teacher_id: int) -> str:
         todo_count = sum(item.todo_count for item in summary.reminders)
         todo_minutes = sum(item.todo_minutes for item in summary.reminders)
         lines = [f"{summary.student_name or student.username}今日学情"]
+        today_text = guardian_today.build_guardian_today_learning_summary(db, student.id)
+        lines.append(today_text.replace("今天学习 ", "自报学习时长：", 1))
         lines.append(f"待完成任务：{todo_count} 项，预计 {todo_minutes} 分钟" if todo_count else "待完成任务：暂无")
-        lines.append(f"薄弱点：{summary.weak_points[0].tag}" if summary.weak_points else "薄弱点：暂无新增记录")
+        lines.append("薄弱点：" + "、".join(item.tag for item in summary.weak_points[:2]) if summary.weak_points else "薄弱点：暂无新增记录")
         lines.append(f"每日回顾：{summary.support_items[0].content}" if summary.support_items else "每日回顾：暂无记录")
-        lines.append(
-            f"最近试卷：{summary.recent_assignments[0].exam_title}（{summary.recent_assignments[0].status}）"
-            if summary.recent_assignments
-            else "最近试卷：暂无记录"
+        latest_exam = (
+            db.query(ExamRecord, Exam)
+            .join(Exam, Exam.id == ExamRecord.exam_id)
+            .filter(ExamRecord.student_id == student.id, ExamRecord.status.in_(["submitted", "graded"]))
+            .order_by(ExamRecord.submitted_at.desc(), ExamRecord.id.desc())
+            .first()
         )
+        if latest_exam:
+            record, exam = latest_exam
+            score = f"{record.total_score.normalize():f} 分" if record.status == "graded" and record.total_score is not None else "待批改"
+            lines.append(f"最近试卷：{exam.title}（{score}）")
+        elif summary.recent_assignments:
+            assignment = summary.recent_assignments[0]
+            lines.append(f"最近试卷：{assignment.exam_title}（{assignment.status}）")
+        else:
+            lines.append("最近试卷：暂无记录")
+        suggestions = [f"{item.tag}：{item.next_action}" for item in summary.weak_points[:2]]
+        lines.append("明天建议：" + "；".join(suggestions) if suggestions else "明天建议：先回看今天的记录，再确定下一项任务。")
         sections.append("\n".join(lines))
     return "\n\n".join(sections)
 

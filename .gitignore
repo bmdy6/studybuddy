@@ -16,3 +16,4 @@ playwright-report/
 test-results/
 .DS_Store
 .worktrees/
+dist-landing/

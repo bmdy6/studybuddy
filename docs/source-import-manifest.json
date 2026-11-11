@@ -1,0 +1,1701 @@
+{
+  "source_commit": "4c2c984",
+  "policy": "committed main archive only; no history or working-tree data",
+  "added": [
+    "docs/11-功能/[未开始]任务进度-每日摘要与续学位置.md",
+    "docs/11-功能/[未开始]配置化-外部库引入评估.md",
+    "docs/11-功能/[未开始]配置化-硬编码魔法值整理.md",
+    "docs/11-功能/[部分实施]主会话-选择按钮交互（已停用）.md",
+    "docs/66-调研/技能树-MapFlow接入学习地图-调研.md",
+    "docs/66-调研/本地AI基座与知识图谱-增量调研.md",
+    "docs/66-调研/理念-AI苏格拉底辅导与证据墙-调研.md",
+    "docs/88-superpowers/plans/2026-07-21-chat-page-split.md",
+    "docs/88-superpowers/plans/2026-08-11-pdf-inspector接入实施提示词.md",
+    "docs/88-superpowers/specs/2026-07-23-study-plan-fields-design.md",
+    "docs/99-archive/2026-07-04/判分引擎设计文档.md",
+    "docs/99-archive/2026-07-04/样式设计文档.md",
+    "docs/99-archive/2026-07-04/视觉改版方案文档.md",
+    "docs/99-archive/2026-07-10/家庭学习契约与平板管控.md",
+    "docs/99-archive/2026-07-22/技能/zhixueban-code-reviewer/SKILL.md",
+    "docs/99-archive/2026-07-22/技能/zhixueban-pr-submitter/SKILL.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-05-daily-review-clean-checklist.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-05-daily-review-yesterday-today.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-05-photo-to-markdown.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-06-daily-review-plan-chat-entry.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-06-error-first-agent-context.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-06-notes-default-all.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-08-wechat-bot-binding-mvp.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-11-wechat-shared-bot-parent-reminders.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-16-guardian-today-learning-summary.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-18-conversational-profile-onboarding.md",
+    "docs/99-archive/2026-07-22/计划/2026-07-19-module-migration-prep.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-05-daily-review-clean-checklist-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-05-daily-review-yesterday-today-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-05-p1-fixes-delivery-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-06-daily-review-plan-chat-entry-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-06-error-first-agent-context-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-06-material-markdown-memory-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-06-notes-default-all-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-07-general-growth-wechat-entry-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-07-learning-map-mvp-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-07-memory-service-mem0-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-07-parent-supervision-distribution-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-07-study-plan-draft-confirmation-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-11-wechat-shared-bot-mvp-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-13-mobile-binding-home-experience-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-16-guardian-today-learning-summary-design.md",
+    "docs/99-archive/2026-07-22/设计/2026-07-16-pr-skill-and-ci-ai-reviewer-design.md",
+    "docs/99-archive/2026-07-22/设计/后端模块化架构.md",
+    "docs/99-archive/2026-07-22/需求/01-学习计划草案确认.md",
+    "docs/99-archive/2026-07-22/需求/02-素材Markdown与长期记忆.md",
+    "docs/99-archive/2026-07-22/需求/03-错题掌握与学习地图.md",
+    "docs/99-archive/2026-07-22/需求/05-家长督促与定向分发.md",
+    "docs/99-archive/2026-07-22/需求/07-验证体系升级需求分析.md",
+    "docs/99-archive/2026-07-22/需求/10-微信学习助手对话式学习入口.md",
+    "docs/99-archive/2026-07-24/产品决策-学习闭环U040-U045-2026-07-23.md",
+    "docs/99-archive/2026-07-24/学习计划与试卷学习闭环问题分析-2026-07-22.md",
+    "docs/99-archive/2026-07-24/学习闭环实施顺序分析-2026-07-22.md",
+    "docs/99-archive/2026-07-24/问题清单-2026-07-23.md",
+    "docs/99-archive/2026-07-25/adr/0002-models-centralized.md",
+    "docs/99-archive/2026-07-25/adr/0003-agent-as-orchestrator.md",
+    "docs/99-archive/2026-07-25/adr/0004-agent-as-orchestration-feature.md",
+    "docs/99-archive/2026-08-17/[调研完整版]教材获取-国家智慧教育平台渠道.md",
+    "docs/plans/2026-08-10-知识点掌握度系统-design.md",
+    "docs/plans/2026-08-10-知识点掌握度系统-plan.md",
+    "docs/superpowers/plans/2026-07-25-session-state-persistence.md",
+    "docs/superpowers/plans/2026-08-01-plan-draft-state-machine.md",
+    "docs/教育理念-AI教育工具观点.md",
+    "docs/知了产品愿景与原则.md",
+    "hobbybuddy/README.md",
+    "hobbybuddy/backend/.env.example",
+    "hobbybuddy/backend/config.yaml",
+    "hobbybuddy/backend/hobby/auth_router.py",
+    "hobbybuddy/backend/hobby/chat_router.py",
+    "hobbybuddy/backend/hobby/config.py",
+    "hobbybuddy/backend/hobby/database.py",
+    "hobbybuddy/backend/hobby/deps.py",
+    "hobbybuddy/backend/hobby/hobby_tools.py",
+    "hobbybuddy/backend/hobby/main.py",
+    "hobbybuddy/backend/hobby/models.py",
+    "hobbybuddy/backend/hobby/prompts/agent/system_hobby.md",
+    "hobbybuddy/backend/hobby/prompts_loader.py",
+    "hobbybuddy/backend/hobby/security.py",
+    "hobbybuddy/backend/requirements.txt",
+    "hobbybuddy/backend/scripts/run_ddl.py",
+    "hobbybuddy/backend/sql/001_hobby_init.sql",
+    "hobbybuddy/backend/tests/conftest.py",
+    "hobbybuddy/backend/tests/test_minimal.py",
+    "hobbybuddy/client/.env.example",
+    "hobbybuddy/client/README.md",
+    "hobbybuddy/client/index.html",
+    "hobbybuddy/client/package-lock.json",
+    "hobbybuddy/client/package.json",
+    "hobbybuddy/client/src/api.ts",
+    "hobbybuddy/client/src/index.css",
+    "hobbybuddy/client/src/main.tsx",
+    "hobbybuddy/client/src/pages/Chat.tsx",
+    "hobbybuddy/client/src/pages/Login.tsx",
+    "hobbybuddy/client/src/shared/theme/antdTheme.ts",
+    "hobbybuddy/client/src/shared/theme/breakpoints.ts",
+    "hobbybuddy/client/src/shared/theme/designTokens.ts",
+    "hobbybuddy/client/src/vite-env.d.ts",
+    "hobbybuddy/client/tsconfig.json",
+    "hobbybuddy/client/vite.config.ts",
+    "scripts/dev_local.sh",
+    "scripts/devlog/collect_devlog.py",
+    "scripts/import_textbook.py",
+    "scripts/try_markdown_ocr.py",
+    "scripts/worktree_setup.sh",
+    "studybuddy-backend/.gitignore",
+    "studybuddy-backend/scripts/check_agent_hardcoding.py",
+    "studybuddy-backend/scripts/check_parent_reminder_health.py",
+    "studybuddy-backend/scripts/dedupe_error_book.py",
+    "studybuddy-backend/scripts/fix_protocol_error_records.py",
+    "studybuddy-backend/scripts/migrate_draft_notes_to_confirmed.py",
+    "studybuddy-backend/scripts/run_ddl.py",
+    "studybuddy-backend/scripts/unstick_material_processing_status.py",
+    "studybuddy-backend/scripts/verify_plan_alignment_textbook_live.py",
+    "studybuddy-backend/scripts/verify_study_plan_date_live.py",
+    "studybuddy-backend/tests/live/__init__.py",
+    "studybuddy-backend/tests/live/test_agent_tools_live.py",
+    "studybuddy-backend/tests/live/test_chat_context_live.py",
+    "studybuddy-backend/tests/live/test_chat_response_format_contract_live.py",
+    "studybuddy-backend/tests/live/test_daily_agent_context_live.py",
+    "studybuddy-backend/tests/live/test_daily_summary_live.py",
+    "studybuddy-backend/tests/live/test_error_import_live.py",
+    "studybuddy-backend/tests/live/test_follow_user_goal_live.py",
+    "studybuddy-backend/tests/live/test_growth_summary_live.py",
+    "studybuddy-backend/tests/live/test_guardian_positive_summary_live.py",
+    "studybuddy-backend/tests/live/test_light_feedback_guard_live.py",
+    "studybuddy-backend/tests/live/test_light_practice_live.py",
+    "studybuddy-backend/tests/live/test_light_routing_fix_live.py",
+    "studybuddy-backend/tests/live/test_material_auto_ingest_live.py",
+    "studybuddy-backend/tests/live/test_material_no_crawl_live.py",
+    "studybuddy-backend/tests/live/test_plan_alignment_textbook_honesty_live.py",
+    "studybuddy-backend/tests/live/test_read_material_live.py",
+    "studybuddy-backend/tests/live/test_study_plan_date_live.py",
+    "studybuddy-backend/tests/live/test_wechat_agent_live.py",
+    "studybuddy-backend/tests/live/test_wechat_guardian_agent_live.py",
+    "studybuddy-client/.gitignore",
+    "studybuddy-client/landing-public/icons/apple-touch-icon-180.png",
+    "studybuddy-client/landing-public/icons/favicon-32.png",
+    "studybuddy-client/landing-public/robots.txt",
+    "studybuddy-client/landing-public/sitemap.xml",
+    "studybuddy-client/landing.html",
+    "studybuddy-client/src/landing/LandingApp.tsx",
+    "studybuddy-client/src/landing/landing.css",
+    "studybuddy-client/src/landing/main.tsx",
+    "studybuddy-client/src/landing/sections/Features.tsx",
+    "studybuddy-client/src/landing/sections/FinalCta.tsx",
+    "studybuddy-client/src/landing/sections/Hero.tsx",
+    "studybuddy-client/src/landing/sections/Loop.tsx",
+    "studybuddy-client/src/landing/sections/Start.tsx",
+    "studybuddy-client/src/landing/sections/Trust.tsx",
+    "studybuddy-client/src/landing/sections/Value.tsx",
+    "studybuddy-client/src/landing/useReveal.ts",
+    "studybuddy-client/vite.landing.config.ts",
+    "wechat_bot_service/.env.example",
+    "wechat_bot_service/__init__.py",
+    "wechat_bot_service/__main__.py",
+    "wechat_bot_service/requirements.txt",
+    "wechat_bot_service/runtime.py",
+    "wechat_bot_service/service.py",
+    "wechat_bot_service/tests/test_main.py",
+    "wechat_bot_service/tests/test_service.py"
+  ],
+  "omitted": [
+    {
+      "path": ".github/codex/prompts/review.md",
+      "reason": "原私有仓库审查/CI 配置"
+    },
+    {
+      "path": ".github/workflows/mimo-review.yml",
+      "reason": "原私有仓库审查/CI 配置"
+    },
+    {
+      "path": "docs/00-README.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]个人中心-样式优化.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]主会话-Agent可靠性增强.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]主会话-Agent工具网关与防幻觉基础设施.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]主会话-RunOutcome统一工具执行终态.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]主会话-会话状态持久化.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]主会话-计划草案状态机.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]冷启动-首次引导.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]品牌-名称配置化与改名.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]学生报进度-需求.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]官网-落地页.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]提示词-集中收口到app-prompts.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]教材-素材化接入P0.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]试卷-体验优化与演进规划.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[已验收]配置化-Config与Secret分离.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[未开始]文档-OfficeCLI集成.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[未开始]架构-新账号边界bug根因与改进方向.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[未开始]记忆-统一召回与关系边.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分完成]PWA-添加到主屏幕.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分完成]提示词-规范化与AI输出优化.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分完成]笔记-AI笔记链路与学习页六入口验收.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]PC端-响应式适配.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]兴趣空间-v1资源推荐与对话.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]学习地图-知识路径改造.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]家庭目标-任务激励与奖励记录.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]错题本-防敷衍质量门禁.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]验收-2026-08-02近期修复复核.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/00-README.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/[P1-高][已解决]主会话-轻练后试卷路由被上下文污染.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/[P2-中][已解决]CI-DeepSeek审查gate误报未产出结果.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/[P2-中][已解决]学习计划-确认卡待确认标签颜色错误.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/[P2-中][已解决]轻练-出题轮违规调record_feedback落库负面判断.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/[P3-低][已解决]轻练-出题与讲解正文markdown星号残留.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/22-bug/待分析-任务会话与学习流程体验问题.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/88-superpowers/plans/2026-07-21-material-vision-mobile-chat-layout.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/88-superpowers/plans/2026-07-26-cold-start-onboarding.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/88-superpowers/specs/2026-07-26-cold-start-onboarding-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/API设计文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/P1.0后端实现计划.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/P1.1前端实现计划.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/P2-agent主页技术规划.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/P2-agent化需求文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/README.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/superpowers/plans/2026-06-26-answer-card-parent-errorbook.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/superpowers/plans/2026-07-04-cold-start-profile-memory.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/superpowers/specs/2026-06-26-answer-card-parent-errorbook-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/superpowers/specs/2026-07-04-cold-start-profile-memory-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/开发进度已完成项-2026-07-04.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/开发进度归档-2026-07-02.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/弟弟视角体验报告-2026-06-30.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/执行计划文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/数据模型文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/新功能方案文档-素材预览-笔记-B站预审.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/架构设计文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/用户体验审查文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/笔记功能实现计划.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/规范遵循清单.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/错题导入与笔记完善方案.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-04/项目结构文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-05/需求池与产品想法文档-2026-07-05.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/人工验收报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/人工验收清单.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/学生记忆与微信接入需求文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/开发进度历史-2026-07-15-stitch与导航统一.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/真人验收指南.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/竞品调研文档.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/00-通用执行规则.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/01-阶段一-先完成PR01/PR-01-每日教练与自动学习记忆Spec.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/02-阶段二-第一并行波/PR-02-每日学习记录数据模型与API.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/02-阶段二-第一并行波/PR-05-学生长期主会话后端.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/02-阶段二-第一并行波/PR-06-素材自动识别与去重后端.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/02-阶段二-第一并行波/PR-08-学习档案移除默认60分.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/03-阶段三-第二并行波/PR-03-每日真实证据聚合与去重.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/03-阶段三-第二并行波/PR-07-素材手机页自动入库体验.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/03-阶段三-第二并行波/PR-09-学生端单一长期会话界面.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/04-阶段四-核心摘要/PR-04-每日AI摘要自动生成与入库.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/04-阶段四-核心摘要/PR-20-真实学习进度指标API.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/04-阶段四-核心摘要/PR-22-统一错题与知识点复习入口.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-10-每日记录注入Agent上下文.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-11-每日对齐状态与快捷选择API.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-13-每日记录自动刷新与跨日收口.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-15-每日学习记录时间线.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-17-家长正向成长摘要生成器.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/05-阶段五-第三并行波/PR-21-成长首页真实进度趋势.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/06-阶段六-第四并行波/PR-12-Today每日对齐界面.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/06-阶段六-第四并行波/PR-14-Today自动展示今日摘要.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/06-阶段六-第四并行波/PR-16-学习首页收敛每日记录入口.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/06-阶段六-第四并行波/PR-18-家长定时推送改用每日记录.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/06-阶段六-第四并行波/PR-23-优化笔记手机页层级.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/07-阶段七-集成验收/PR-19-家长主动查询复用每日记录.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/07-阶段七-集成验收/PR-24-完整验收与文档收口.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/任务/任务清单/README.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-05-p1-fixes-delivery.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-06-error-note-review-card.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-06-learning-insight-and-exam-assignment.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-06-material-markdown-memory-plan.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-general-growth-wechat-entry.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-learning-map-mvp.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-parent-supervision-distribution.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-photo-answer-accuracy-evaluation.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-photo-answer-item-review.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-07-study-plan-draft-confirmation.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-11-wechat-shared-bot-student.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-12-wechat-guardian-growth-summary.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-13-today-learning-dock.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-14-wechat-qr-code-binding.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-05-photo-to-markdown-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-06-error-note-review-card-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-06-learning-insight-and-exam-assignment-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-07-photo-answer-accuracy-evaluation-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-11-wechat-account-center-redesign.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/前端模块化架构.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/调研/知了错题复习与学习路径调研-2026-07-12.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/00-下一阶段需求总览.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/06-通用成长目标与微信轻入口.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/09-微信学习助手推送MVP.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/11-手机端自助注册与微信内登录保持.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/12-每日教练与自动学习记录.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/验收/2026-07-13-微信本人自动绑定真人验收.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/验收/手机端自助注册与微信内登录保持.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-24/已实现能力清单.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-24/验收-PR105-107-2026-07-24.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-24/验收-学习闭环U040-U045-2026-07-23.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-07-25/本地验收踩坑清单-完整历史.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/2026-08-17/[未开始]教材-资产库与版本更新(方向已被P0素材路线替代-仅留档).md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P0-紧急][已解决]主会话-完成学习结论与正式状态冲突.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P0-紧急][已解决]试卷-AI自练卷答案协议错判.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]主会话-清除上下文未清空当前会话.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]今日任务-任务列表抽屉打开后停在视口外.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]今日计划-新账号空态误显示重新加载.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]冷启动-问题重复与历史按钮刷新复活.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学习计划-任务会话误给跑题选项与未确认即建计划.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学习计划-多计划选择后AI文案与当前任务不一致.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学习计划-未确认循环失败与AI事实冲突.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学习计划-草案日期显示错误.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学习页-继续学习卡片未进入任务会话.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]学生报进度-无学习记录仍允许发送.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]微信绑定-390px失效弹窗操作区越界.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]微信绑定-今天不再提醒不关闭引导弹窗.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]权限-chat路由越权读与service归属校验缺失.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P1-高][已解决]登录-320px卖点区域横向裁切.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]个人中心-报进度区域缺少横向间距.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]主会话-AI正文复述选项问题导致重复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]主会话-顶部任务栏冗余加号与按钮拥挤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]今天首页-顶部任务栏长标题被操作按钮严重压缩.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]家长摘要-AI输出科目交叉不归类.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-02/[P2-中][已解决]试卷-聊天卡开始作答按钮触控高度不足.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P0-紧急][已解决]试卷-历史答案协议错误数据仍展示正式零分.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P1-高][已解决]冷启动-空消息轮AI编造学习事实并落库.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P1-高][已解决]学习计划-微信引导弹窗遮挡草案确认按钮.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]主会话-task会话激活但计划逾期顶部显示空态.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]主会话-新号首屏plans错误卡error态.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]冷启动-grade未持久化导致微信引导不弹.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]冷启动-口语画像表达落库失败.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]冷启动-新账号注册后无年级引导与欢迎语幻觉.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P2-中][已解决]学习计划-已确认草案刷新后卡片重新弹出.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P3-低][已解决]学习计划-AI草案日期沿用旧对话显示陈旧.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-08/[P3-低][已解决]学习计划-AI部分请求未调草案工具只口头给草案.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-10/[P0-紧急][已解决]计划-完成学习无证据门禁回归.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-10/[P1-高][已解决]微信家长-时间设置只接受编号与提示文案承诺不符.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/22-bug/2026-08-10/[P1-高][已解决]微信绑定-扫码后立即发码竞态失败.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-下一步方向讨论/把关意见-小萤-2026-08-05.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-下一步方向讨论/方案讨论-sol.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/event-log.jsonl",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/runs-m0/output.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v0-学习计划页初始态.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v1-path1-再次进入-新消息显示.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v1-path1-再次进入-缺2540文本.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v1-path1-发送新消息-AI回复完成.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v1-path1-进入英语计划-历史完整显示.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v3-主代理-刷新后历史完整.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v3-主代理-路径2切回后历史完整.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots-验收/v3-主代理-进入英语计划历史显示.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/00-学习计划页初始态.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/01-进入task会话-AI回复.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/02-输入测试消息.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/03-发送后AI回复.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/04-返回今天-主会话.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/05-重新进入前-学习计划页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/06-路径1切回后-消息丢失现场.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/07-路径2-进入数学task会话.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/08-路径2-数学会话输入消息.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/09-路径2-回到主会话.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/10-路径2-再进英语601-历史丢失.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/11-再进英语601-AI回复完成-历史仍不显示.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/12-路径3-刷新后历史恢复.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/13-路径2-数学623切回后.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/screenshots/14-发送消息3-AI回复完成.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/user-questions.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/小萤分析.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/摸底报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-05-任务会话消息丢失/验收报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/处理策略-协作分工与批次.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/把关意见-处理策略-小萤-2026-08-06-v2.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/把关意见-处理策略-小萤-2026-08-06.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/把关意见-小萤-2026-08-06.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/把关意见-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/把关意见-方案sol-小萤-2026-08-06.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/摸底-现状与证据.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/方案-sol-收口与批次.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/最终方案-定稿v1.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/计划-下一步行动草案.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-下一步行动/评估报告-合并前把关-2026-08-06.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-出题形态调研/方案-sol-出题vs试卷.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-前端优化与获客调研/摸底-PC版现状.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-前端优化与获客调研/摸底-学习栏目痛点.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-前端优化与获客调研/方案-sol.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-06-前端优化与获客调研/调研-获客方向.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-07-CSS拆分调研/方案-sol-CSS拆分与PC合并.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-07-剩余PC页面/摸底-剩余PC页面.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/99-archive/runs/2026-08-07/2026-08-07-剩余PC页面/方案-sol-答题页桌面双栏.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/AI浏览器验收流程.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端官网与产品逻辑/把关意见-批次1-PC壳-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端官网与产品逻辑/把关意见-方案sol-PC端官网产品逻辑-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端官网与产品逻辑/摸底-PC端官网产品逻辑现状.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端官网与产品逻辑/方向定稿-PC端官网产品逻辑-v1.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端官网与产品逻辑/方案-sol-PC端官网产品逻辑.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端布局修复/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-06-PC端布局修复/摸底-手机端回归与页面过宽.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/output.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/screenshots/sb-r-1024.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/screenshots/sb-r-1300.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/screenshots/sb-r-1372.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/screenshots/sb-r-1440.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/screenshots/sb-r-390.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/定稿-最终方案-PC三栏分隔与紧凑档修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/审查报告-PC三栏分隔与紧凑档修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/把关意见-方案-PC三栏分隔与紧凑档-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/摸底-PC三栏分隔与紧凑档.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/方案-sol-PC三栏分隔与紧凑档.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/视觉兜底报告-PC三栏分隔与紧凑档修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/计划-PC三栏分隔与紧凑档修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/评估报告-2026-08-07.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-PC三栏分隔与紧凑档/验收-PC三栏分隔与紧凑档修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/01-学习首页-六入口.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/02-错题页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/03-知识地图页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/04-试卷页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/05-笔记页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/06-素材页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/screenshots/07-每日记录页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/sol-input-问题清单.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/摸底-学习展示现状与历史分析.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-learning-display-and-launch/方案-sol-学习展示与上线规划.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/01-学习首页-六入口.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/02-错题页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/03-知识地图页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/04-试卷页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/05-笔记页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/06-素材页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/screenshots/07-每日记录页.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-学习展示与上线规划/摸底-学习展示现状与历史分析.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-家长端PC/摸底-家长端PC.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-07-家长端PC/方案-sol-家长端PC.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/视口自验/320x568.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/视口自验/390x844.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/视口自验/414x896.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/视口自验/desktop-1280.png",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/调研报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-官网调研/验收结论.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-轻练错题入库调研/调研报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-08-轻练验收/验收结论.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/output-批次1.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/output-批次2.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/output-批次3.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/sol-input-问题清单.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/兜底-视觉验证-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/定稿-最终方案-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/审查吸收-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/审查报告-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/把关意见-方案sol-AI回复格式换行丢失根治-小萤-正式版.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/把关意见-方案sol-AI回复格式换行丢失根治-小萤-独立复核.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/把关意见-方案sol-AI回复格式换行丢失根治-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/摸底-AI回复格式换行丢失.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/方案-sol-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/计划-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-AI回复格式换行丢失根治/验收-AI回复格式换行丢失根治.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-硬件方向/方案-revised.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-硬件方向/调研报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/output-batch1.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/output-batch2.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/output-batch3.json",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/定稿-最终方案.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/审查-CI自动审查.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/把关意见-小萤.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/摸底-配置提示词CI现状.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/方案-sol-配置提示词收拢.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/视觉兜底-跳过说明.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/计划-执行批次.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-09-配置提示词收拢/验收-CI门禁全绿.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-10-血液循环模拟器/README.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-10-血液循环模拟器/index.html",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/flow.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/output-验收结果.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/兜底-视觉说明.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/定稿-接入POC方案.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/定稿v2-聚焦B站合集感知.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/定稿v3-视频学习闭环.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/审查-报告.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/把关意见-小萤-原始输出.txt",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/摸底-现状.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/方案-sol-接入POC.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/计划-执行计划.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/验收-执行结果.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/runs/2026-08-11-deeptutor-agentreach-poc/验收-本地POC.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-08-08-pc-chat-dock-compact.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-30-family-goal-reward.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-08-08-pc-chat-dock-compact-design.md",
+      "reason": "含私人路径、账号/家庭上下文、服务地址或生产记录"
+    },
+    {
+      "path": "docs/内测账号说明.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/开发进度文档.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/待验收清单.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/本地验收踩坑清单.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/测试账号状态.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/评估与复盘/小萤分析-2026-08-04-计划对齐与教材诚实.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/评估与复盘/评估报告-2026-08-03-草案日期修复.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "docs/评估与复盘/评估报告-2026-08-04-计划对齐与教材诚实.md",
+      "reason": "运行/验收/账号/历史协调记录或未经审查的素材"
+    },
+    {
+      "path": "scripts/deploy_all.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/deploy_backend.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/deploy_landing.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/deploy_web.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/deploy_wechat_bot.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/fix_nginx_sse.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/setup_daily_coach_cron.sh",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "scripts/start_mysql_3307.sh",
+      "reason": "默认操作既有个人 MySQL 数据目录；公开版用独立 Docker 数据库"
+    },
+    {
+      "path": "studybuddy-backend/README.md",
+      "reason": "私有运行和部署说明；以公开根 README 替代"
+    },
+    {
+      "path": "studybuddy-backend/scripts/init_users.py",
+      "reason": "旧家庭默认账号初始化；公开版无默认用户，走注册"
+    },
+    {
+      "path": "studybuddy-backend/scripts/reset_real_data.py",
+      "reason": "真实学生作答/评估样本"
+    },
+    {
+      "path": "studybuddy-backend/tests/fixtures/photo_markdown_real_samples.jsonl",
+      "reason": "真实学生作答/评估样本"
+    },
+    {
+      "path": "studybuddy-backend/tests/unit/test_backend_workflow_config.py",
+      "reason": "仅测试未搬的私有部署/CI"
+    },
+    {
+      "path": "studybuddy-backend/tests/unit/test_deploy_scripts.py",
+      "reason": "仅测试未搬的私有部署/CI"
+    },
+    {
+      "path": "studybuddy-backend/tests/unit/test_deploy_wechat_bot_script.py",
+      "reason": "仅测试未搬的私有部署/CI"
+    },
+    {
+      "path": "studybuddy-client/README.md",
+      "reason": "私有运行和部署说明；以公开根 README 替代"
+    },
+    {
+      "path": "studybuddy-client/landing-public/og-image.png",
+      "reason": "无法确认原截图数据来源；改用本次合成数据截图"
+    },
+    {
+      "path": "studybuddy-client/landing-public/shots/home.webp",
+      "reason": "无法确认原截图数据来源；改用本次合成数据截图"
+    },
+    {
+      "path": "studybuddy-client/landing-public/shots/papers.webp",
+      "reason": "无法确认原截图数据来源；改用本次合成数据截图"
+    },
+    {
+      "path": "studybuddy-client/landing-public/shots/wrong-notes.webp",
+      "reason": "无法确认原截图数据来源；改用本次合成数据截图"
+    },
+    {
+      "path": "studybuddy-client/public/wechat-official-account-qr.jpg",
+      "reason": "私人公众号二维码"
+    },
+    {
+      "path": "wechat_bot_service/ecosystem.config.cjs",
+      "reason": "私有部署/服务器/进程配置"
+    },
+    {
+      "path": "docs/11-功能/[未开始]主会话-语音输入.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[未开始]平台-学习阶段与学习模式切换.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分完成]主会话-任务会话边界与每日摘要.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]主会话-Prompt结构化与可观测性.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]主会话-任务会话制定计划放宽与计划去重.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]主会话-对话轻练MVP-A.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]学习栏目-前端样式统一与框架契约.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]性能与重构-N+1查询与代码冗余整理.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]素材-AI自动生成名称知识点标签与摘要.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/11-功能/[部分实施]素材-接入pdf-inspector解析文本型PDF.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/知了Learning Flow产品模型.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-18/知了信息架构方向.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/技能/zhixueban-task-prompt-creator/SKILL.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-04-daily-review-account-switch.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-08-agent-frontend-split-plan.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-08-frontend-visual-compression-polish.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-11-wechat-account-center-redesign.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-13-learning-flow-mvp.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-13-mobile-binding-home-experience.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-14-mobile-student-registration.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/计划/2026-07-18-daily-coach-integration-acceptance.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-06-photo-answer-review-markdown-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-07-common-markdown-extraction-architecture.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-07-photo-answer-item-review-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-08-wechat-bot-binding-mvp-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-12-wechat-guardian-reports-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-13-learning-flow-mvp-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-13-today-learning-dock-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-14-mobile-student-registration-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-17-daily-coach-auto-memory-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/设计/2026-07-17-pr06-material-auto-ingest-dedup-design.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/04-拍题作答评测与纠错.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/09-微信H5错题学习MVP与持久登录.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-22/需求/13-后端按业务功能模块化拆分.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-24/审查问题-学习闭环U040-U045-2026-07-23.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-25/adr/0001-feature-modularization.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-25/未实现需求清单-整理前完整快照.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/99-archive/2026-07-26/技术债与重构清单.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    },
+    {
+      "path": "docs/教育理念-能力阈值观.md",
+      "reason": "含原私有环境规模、部署或真实运行验收记录"
+    }
+  ],
+  "path_naming_note": "清单中的历史产品名已统一为知了；对照原仓库时按同目录及文档日期定位，未修改原仓库。"
+}

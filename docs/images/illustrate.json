@@ -1,55 +1,60 @@
 {
-  "baseline": {
-    "version": 2,
-    "commit": "b5ba068bf6a7fe39b19235f80503584d07373933",
-    "readmes": [
-      {
-        "file": "README.md",
-        "blob": "ef5c4878165aecc38dcab8c607f7e551274e0fbc"
-      }
-    ]
-  },
+  "version": 4,
   "sources": "docs/images/SOURCES.md",
+  "synthetic": true,
+  "model_calls": 0,
   "images": [
     {
-      "id": "overview",
-      "readme": "README.md",
       "file": "docs/images/overview.png",
-      "sha256": "61754d940df66c967c33502eb531df5c2dca475599070062804b9b33297443f7",
-      "alt": "学习页中的计划与继续入口",
-      "caption": "学习总览：查看今日计划与继续入口。",
-      "width": 640,
-      "placement": "hero"
+      "sha256": "718d2283ae9509a2d266771cade4e2716f781771849e214260edf4c16b525cb0"
     },
     {
-      "id": "plan-confirm",
-      "readme": "README.md",
       "file": "docs/images/plan-confirm.png",
-      "sha256": "6c3cd1691053234f16231a2d4c802364fca37d79d2e1d9f47e566f6cba1b6b64",
-      "alt": "查看两项计划草案并确认创建",
-      "caption": "确认任务与预计时间。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "b93e3a23ad2790196002bfed8ce558fd27fc9e3a11cd0196cf754495ef172e8f"
     },
     {
-      "id": "task-session",
-      "readme": "README.md",
       "file": "docs/images/task-session.png",
-      "sha256": "abc1b9845a41213729e70d255387517b70e700165e6998236f5f61310baa1e7c",
-      "alt": "任务会话中保留的作答与下一次练习起点",
-      "caption": "保留作答与下一步练习。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "6a3ced0a677d577ac75cd8053d8c79e3ffe3f3a87376aead91f9f776c4731c50"
     },
     {
-      "id": "resume",
-      "readme": "README.md",
       "file": "docs/images/resume.png",
-      "sha256": "2434a536fb33015f3021797027ced678510bb27674501653d06769c31aa9631e",
-      "alt": "计划列表中的任务与完成状态",
-      "caption": "查看未完成计划。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "28341a3e9218cfefa7e9d6cae99f7306ca59a343a160a49824c1092de1ad3d9e"
+    },
+    {
+      "file": "docs/images/mobile-task.png",
+      "sha256": "89058b951bfcc37b46780bafc8bf00fce17c256d09f599d26081c69f16da6bb9"
+    },
+    {
+      "file": "docs/images/mobile-plan.png",
+      "sha256": "7fbea5570f2414c9c58a3efcd6ff807a0e1b6ff5aba08616b75b2f28e6d1aa5e"
+    },
+    {
+      "file": "docs/images/mobile-notes.png",
+      "sha256": "201d8f06547c7d8af6397052856686adb5db87365b907d614ee81c6400233a2e"
+    },
+    {
+      "file": "docs/images/wechat-daily-demo.png",
+      "sha256": "b85381db7f0fcfc1dd6ddad770732adff87cc2b112df30f870f568bca68675e7"
+    },
+    {
+      "file": "docs/images/landing.png",
+      "sha256": "5c651aa0f944003d59fc082428b2c959f08f23127e4052b4855d7882ad7d19a0"
+    },
+    {
+      "file": "docs/images/wechat-conversation-demo.png",
+      "sha256": "683fbe7b7e61c9762f9d9c16ca05d9e7c119a8e42b63085699527d7995f7172d"
+    },
+    {
+      "file": "docs/images/readme-github.png",
+      "sha256": "a497ea4a6d7c0ce225ab92fe27a9a9c447ed0311bd3c33d379874101e3b9a0b6"
+    },
+    {
+      "file": "docs/images/readme-github-features.png",
+      "sha256": "3f28f41aabdbc0ef91e01c84cf5d0b81ed9189e13f7181fbfcc4527072c9ffe0"
+    },
+    {
+      "file": "docs/images/readme-github-architecture.png",
+      "sha256": "31deefa7b601c35fb998e7fb740f82b787cfa4aae9888fd7e4c2a8b623f66ca0"
     }
   ]
 }
