@@ -58,6 +58,7 @@ def test_daily_summary_includes_completed_duration_review_weakness_score_and_nex
     assert '999' not in text  # Planned time must not become actual learning duration.
     assert '昨日已完成项目' not in text
     assert '其他家庭私密试卷' not in text
+    assert '。；' not in text
 
 
 @pytest.mark.parametrize('status,score,expected', [('submitted', Decimal('86'), '待批改'), ('graded', None, '待批改'), ('graded', Decimal('0'), '0 分')])
@@ -81,3 +82,43 @@ def test_daily_summary_empty_and_assignment_fallback(db):
     assert '待开始小测（assigned）' in build_parent_daily_summary(db, guardian.id)
     db.delete(db.query(TeacherStudent).filter_by(teacher_id=guardian.id).one()); db.flush()
     assert build_parent_daily_summary(db, guardian.id) == '当前没有已绑定学生'
+
+
+@pytest.mark.parametrize('ending', ['。', '；', ';', '.', '！', '!', '？', '?', '。；  \n', ''])
+def test_daily_summary_joins_suggestions_with_single_punctuation(db, monkeypatch, ending):
+    from types import SimpleNamespace
+    from app.features.wechat import guardian as guardian_service
+
+    guardian, student = _family(db)
+    summary = SimpleNamespace(
+        student_name=student.display_name,
+        reminders=[],
+        weak_points=[
+            SimpleNamespace(tag='单位分数', next_action=f'先复习 1.5 页，再做练习{ending}'),
+            SimpleNamespace(tag='通分', next_action='回看例题，再解释为什么。'),
+        ],
+        support_items=[],
+        recent_assignments=[],
+    )
+    monkeypatch.setattr(guardian_service.supervision_service, 'build_supervision_summary', lambda *_: summary)
+    text = build_parent_daily_summary(db, guardian.id)
+
+    suggestions = next(line for line in text.splitlines() if line.startswith('明天建议：'))
+    assert suggestions == '明天建议：单位分数：先复习 1.5 页，再做练习；通分：回看例题，再解释为什么。'
+
+
+def test_daily_summary_keeps_single_suggestion_as_a_sentence(db, monkeypatch):
+    from types import SimpleNamespace
+    from app.features.wechat import guardian as guardian_service
+
+    guardian, student = _family(db)
+    summary = SimpleNamespace(
+        student_name=student.display_name,
+        reminders=[],
+        weak_points=[SimpleNamespace(tag='通分', next_action='先回看例题。')],
+        support_items=[],
+        recent_assignments=[],
+    )
+    monkeypatch.setattr(guardian_service.supervision_service, 'build_supervision_summary', lambda *_: summary)
+    text = build_parent_daily_summary(db, guardian.id)
+    assert text.splitlines()[-1] == '明天建议：通分：先回看例题。'
