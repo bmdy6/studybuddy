@@ -172,8 +172,12 @@ def build_parent_daily_summary(db: Session, teacher_id: int) -> str:
             lines.append(f"最近试卷：{assignment.exam_title}（{assignment.status}）")
         else:
             lines.append("最近试卷：暂无记录")
-        suggestions = [f"{item.tag}：{item.next_action}" for item in summary.weak_points[:2]]
-        lines.append("明天建议：" + "；".join(suggestions) if suggestions else "明天建议：先回看今天的记录，再确定下一项任务。")
+        # Suggestions are sentences upstream; this line owns separators and the final stop.
+        suggestions = [
+            item.tag + "：" + item.next_action.rstrip("。；;.!！?？ \t\r\n")
+            for item in summary.weak_points[:2]
+        ]
+        lines.append("明天建议：" + "；".join(suggestions) + "。" if suggestions else "明天建议：先回看今天的记录，再确定下一项任务。")
         sections.append("\n".join(lines))
     return "\n\n".join(sections)
 
