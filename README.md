@@ -1,3 +1,5 @@
+[简体中文](README.md) | [English](README.en.md)
+
 <div align="center">
   <img src="studybuddy-client/public/icons/icon-192.png" width="96" alt="知了应用图标">
   <h1>知了（StudyBuddy）</h1>
