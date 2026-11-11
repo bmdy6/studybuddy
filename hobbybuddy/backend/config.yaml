@@ -1,0 +1,19 @@
+brand:
+  name: 趣爱好
+  name_en: ""
+
+llm:
+  model: mimo-v2.5
+  timeout_seconds: 60
+  retry_count: 2
+  retry_backoff_base: 1.5
+  circuit_fail_threshold: 5
+  circuit_reset_seconds: 120
+  reasoning_effort: none
+
+agent:
+  tool_timeout_seconds: 8
+
+app:
+  log_level: INFO
+  public_upload_base_path: /uploads

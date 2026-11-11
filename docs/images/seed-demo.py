@@ -2,6 +2,7 @@
 No model is called. Every message and assessment below is hand-authored fixture data.
 """
 import json
+import os
 from datetime import date,datetime,timedelta,timezone
 from pathlib import Path
 from app.database import SessionLocal
@@ -39,12 +40,21 @@ with SessionLocal() as db:
       ChatMessage(session_id=task.id,role='user',content='平均分成 5 份，先涂 1 份，再涂 2 份，一共涂了 3 份。不能改成 3/10，因为每一份没有变小。'),
       ChatMessage(session_id=task.id,role='assistant',content='**接下来怎么练**\n\n你的图和算式能对应起来了。请再画一张图解释 $\\frac{2}{7}+\\frac{3}{7}$，并写出相加前后每一份的大小。\n\n这次的答案和解释已经保留，下次打开这个任务可以从画图练习继续。')])
     db.add(StudyPlanItemAttempt(plan_item_id=taskitem.id,student_id=user.id,assessment='needs_retry',evidence_summary='学生回答 3/5，并解释单位分数大小不变（虚构作答）',reason='用图进一步核对单位分数的理解',next_start='用图解释分母为什么不变'))
+    from app.models.teacher_student import TeacherStudent
+    from app.models.note import Note
+    from app.features.wechat.guardian import build_parent_daily_summary
+    parent=User(username='readme_parent', display_name='演示家长', password_hash=hash_password('synthetic-demo-only'), role='teacher')
+    db.add(parent); db.flush()
+    db.add(TeacherStudent(teacher_id=parent.id, student_id=user.id))
+    db.add(Note(student_id=user.id, title='分数练习 · 今日回顾', subject='数学', category='每日回顾', source='每日回顾', status='confirmed', content='## 今天的练习\n练习了同分母分数相加，用图解释 1/5 + 2/5 = 3/5。\n\n## 需要督促的地方\n已完成分数加法口头解释，明天继续画图核对单位分数；这些都是虚构演示记录。'))
+    db.add(Note(student_id=user.id, title="分数加法 · 单位分数", subject="数学", category="基础概念", source="其他", status="confirmed", content="# 同分母分数相加\n每一份的大小不变，只把份数相加。\n\n1/5 + 2/5 = 3/5（虚构演示笔记）。"))
     db.commit()
+    (Path(__file__).parent/'parent-summary.txt').write_text(build_parent_daily_summary(db, parent.id))
     token=create_access_token(user.id,user.role)
     target=Path(__file__).parent
     for name,session_id,is_task in [('plan',main.id,False),('task',task.id,True)]:
       state={'token':token,'role':'student','displayName':'演示同学','userId':user.id,'children':[],'activeChildId':None,'mode':'study','authVersion':1,'recentAccounts':[]}
       nav={'sessionId':session_id,'activeTaskSessionId':task.id if is_task else None,'mainSessionId':main.id if is_task else None}
-      browser={'cookies':[],'origins':[{'origin':'http://127.0.0.1:15173','localStorage':[{'name':'studybuddy-auth','value':json.dumps({'state':state,'version':0},ensure_ascii=False)},{'name':f'studybuddy-nav-{user.id}','value':json.dumps(nav)}]}]}
+      browser={'cookies':[],'origins':[{'origin':os.environ.get('DEMO_CLIENT_ORIGIN', 'http://127.0.0.1:15183'),'localStorage':[{'name':'studybuddy-auth','value':json.dumps({'state':state,'version':0},ensure_ascii=False)},{'name':f'studybuddy-nav-{user.id}','value':json.dumps(nav)}]}]}
       (target/f'{name}-state.private.json').write_text(json.dumps(browser,ensure_ascii=False))
     print(json.dumps({'user':user.id,'main':main.id,'task':task.id,'draft':draft.id,'plan':plan.id,'item':taskitem.id}))

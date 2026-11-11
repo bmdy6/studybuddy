@@ -65,3 +65,35 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
+      - run: npm run build:landing
+  wechat-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: wechat_bot_service/requirements.txt
+      - run: python -m pip install -r wechat_bot_service/requirements.txt pytest pytest-asyncio
+      - run: python -m pytest wechat_bot_service/tests -q
+  hobbybuddy:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: studybuddy-backend:hobbybuddy/backend
+      WECHAT_ENABLED: "false"
+      LLM_API_KEY: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -r studybuddy-backend/requirements.txt -r hobbybuddy/backend/requirements.txt
+      - run: python -m pytest hobbybuddy/backend/tests -q
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.19.2"
+          cache: npm
+          cache-dependency-path: hobbybuddy/client/package-lock.json
+      - run: npm ci && npm run lint && npm run typecheck && npm run build
+        working-directory: hobbybuddy/client

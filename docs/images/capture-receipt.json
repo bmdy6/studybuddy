@@ -1,0 +1,56 @@
+{
+  "browser": "149.0.7827.55",
+  "synthetic": true,
+  "modelCalls": 0,
+  "shots": [
+    {
+      "name": "overview",
+      "route": "/#/study-plans",
+      "width": 1440,
+      "height": 900,
+      "sha256": "718d2283ae9509a2d266771cade4e2716f781771849e214260edf4c16b525cb0"
+    },
+    {
+      "name": "plan-confirm",
+      "route": "/#/chat",
+      "width": 1280,
+      "height": 800,
+      "sha256": "73402db1011bf01ce5aa6f60957b9b7b94c766e330a5411ba75a4bde0b44efc1"
+    },
+    {
+      "name": "task-session",
+      "route": "/#/chat",
+      "width": 1280,
+      "height": 800,
+      "sha256": "bd91d63ff75a43964204631eddd7017af46f0f85e828875e8985c94a3913d1d9"
+    },
+    {
+      "name": "resume",
+      "route": "/#/study-plans/all",
+      "width": 1280,
+      "height": 800,
+      "sha256": "28341a3e9218cfefa7e9d6cae99f7306ca59a343a160a49824c1092de1ad3d9e"
+    },
+    {
+      "name": "mobile-task",
+      "route": "/#/chat",
+      "width": 390,
+      "height": 844,
+      "sha256": "54325f0fad10db7614c314b5666047e227e64ae39c8cfee5cc2827ae443a2b13"
+    },
+    {
+      "name": "mobile-plan",
+      "route": "/#/study-plans",
+      "width": 390,
+      "height": 844,
+      "sha256": "7fbea5570f2414c9c58a3efcd6ff807a0e1b6ff5aba08616b75b2f28e6d1aa5e"
+    },
+    {
+      "name": "mobile-notes",
+      "route": "/#/notes",
+      "width": 390,
+      "height": 844,
+      "sha256": "15573229032d6a81c756c336b21291146d4f6191a5f1db5259c6dc42e7bd564c"
+    }
+  ]
+}

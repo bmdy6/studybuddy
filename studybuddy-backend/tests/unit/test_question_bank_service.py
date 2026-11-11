@@ -235,7 +235,7 @@ def test_save_paper_candidates_classifies_official_sources(db: Session):
             "source_adapter": "education_bureau",
         },
         {
-            "title": "至和实验学校官网八年级数学期中练习",
+            "title": "示例学校官网八年级数学期中练习",
             "url": "https://www.example.edu.cn/jiaowu/math8-mid.pdf",
             "snippet": "学校官网 教务",
             "query": "示例学校 教务 八年级 数学 期中",
@@ -256,7 +256,7 @@ def test_save_paper_candidates_classifies_official_sources(db: Session):
 
 def test_create_manual_paper_source_dedupes_and_marks_official(db: Session):
     req = CreatePaperSourceRequest(
-        title="至和实验学校官网八年级数学期中练习",
+        title="示例学校官网八年级数学期中练习",
         source_url="https://www.example.edu.cn/jiaowu/math8-mid.pdf",
         snippet="学校官网 教务",
         city="苏州",
@@ -272,7 +272,7 @@ def test_create_manual_paper_source_dedupes_and_marks_official(db: Session):
     created = question_bank_service.create_manual_paper_source(db, req, created_by=1)
     updated = question_bank_service.create_manual_paper_source(
         db,
-        req.model_copy(update={"title": "至和实验学校官网八年级数学期中卷"}),
+        req.model_copy(update={"title": "示例学校官网八年级数学期中卷"}),
         created_by=1,
     )
 

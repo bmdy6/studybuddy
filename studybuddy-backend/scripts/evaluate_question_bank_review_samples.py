@@ -2,7 +2,7 @@
 
 用法：
   PYTHONPATH=. .venv/bin/python scripts/evaluate_question_bank_review_samples.py \
-    --city 苏州 --district 苏州工业园区 --school 苏州工业园区至和实验学校 \
+    --city 苏州 --district 苏州工业园区 --school 示例学校 \
     --grade 八年级 --semester 上册 --subject 数学 --exam-type 期中 \
     --limit 8 --output /tmp/qb-review-samples.jsonl
 
@@ -231,7 +231,7 @@ def _default_args_for_tests() -> argparse.Namespace:
         province="江苏",
         city="苏州",
         district="苏州工业园区",
-        school="苏州工业园区至和实验学校",
+        school="示例学校",
         grade="八年级",
         semester="上册",
         subject="数学",

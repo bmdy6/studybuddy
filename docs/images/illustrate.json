@@ -1,55 +1,44 @@
 {
-  "baseline": {
-    "version": 2,
-    "commit": "b5ba068bf6a7fe39b19235f80503584d07373933",
-    "readmes": [
-      {
-        "file": "README.md",
-        "blob": "ef5c4878165aecc38dcab8c607f7e551274e0fbc"
-      }
-    ]
-  },
+  "version": 3,
   "sources": "docs/images/SOURCES.md",
+  "synthetic": true,
+  "model_calls": 0,
   "images": [
     {
-      "id": "overview",
-      "readme": "README.md",
       "file": "docs/images/overview.png",
-      "sha256": "61754d940df66c967c33502eb531df5c2dca475599070062804b9b33297443f7",
-      "alt": "学习页中的计划与继续入口",
-      "caption": "学习总览：查看今日计划与继续入口。",
-      "width": 640,
-      "placement": "hero"
+      "sha256": "718d2283ae9509a2d266771cade4e2716f781771849e214260edf4c16b525cb0"
     },
     {
-      "id": "plan-confirm",
-      "readme": "README.md",
       "file": "docs/images/plan-confirm.png",
-      "sha256": "6c3cd1691053234f16231a2d4c802364fca37d79d2e1d9f47e566f6cba1b6b64",
-      "alt": "查看两项计划草案并确认创建",
-      "caption": "确认任务与预计时间。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "73402db1011bf01ce5aa6f60957b9b7b94c766e330a5411ba75a4bde0b44efc1"
     },
     {
-      "id": "task-session",
-      "readme": "README.md",
       "file": "docs/images/task-session.png",
-      "sha256": "abc1b9845a41213729e70d255387517b70e700165e6998236f5f61310baa1e7c",
-      "alt": "任务会话中保留的作答与下一次练习起点",
-      "caption": "保留作答与下一步练习。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "bd91d63ff75a43964204631eddd7017af46f0f85e828875e8985c94a3913d1d9"
     },
     {
-      "id": "resume",
-      "readme": "README.md",
       "file": "docs/images/resume.png",
-      "sha256": "2434a536fb33015f3021797027ced678510bb27674501653d06769c31aa9631e",
-      "alt": "计划列表中的任务与完成状态",
-      "caption": "查看未完成计划。",
-      "placement": "step",
-      "group": "steps"
+      "sha256": "28341a3e9218cfefa7e9d6cae99f7306ca59a343a160a49824c1092de1ad3d9e"
+    },
+    {
+      "file": "docs/images/mobile-task.png",
+      "sha256": "54325f0fad10db7614c314b5666047e227e64ae39c8cfee5cc2827ae443a2b13"
+    },
+    {
+      "file": "docs/images/mobile-plan.png",
+      "sha256": "7fbea5570f2414c9c58a3efcd6ff807a0e1b6ff5aba08616b75b2f28e6d1aa5e"
+    },
+    {
+      "file": "docs/images/mobile-notes.png",
+      "sha256": "15573229032d6a81c756c336b21291146d4f6191a5f1db5259c6dc42e7bd564c"
+    },
+    {
+      "file": "docs/images/wechat-daily-demo.png",
+      "sha256": "4159619e4c88a26958a8594853b517c045d6c2486f609c065c6cf12210f967f8"
+    },
+    {
+      "file": "docs/images/landing.png",
+      "sha256": "5c248b83d89dd1a2e10a2d1ebc76d23e959251c8e369c60e4795a5c3371e453d"
     }
   ]
 }
