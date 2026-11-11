@@ -1,7 +1,7 @@
 {
   "name": "studybuddy-client",
   "version": "0.1.6",
-  "description": "智学伴 - 个性化学习陪伴平台",
+  "description": "知了 - 个性化学习陪伴平台",
   "author": "xiaoliang",
   "scripts": {
     "dev": "vite",

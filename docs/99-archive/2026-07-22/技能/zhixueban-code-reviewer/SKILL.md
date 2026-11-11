@@ -1,13 +1,13 @@
 ---
 name: zhixueban-code-reviewer
-description: Use when reviewing 智学伴 diffs, branches, commits, PRs, release candidates, or documentation changes for product, architecture, test, browser acceptance, and deployment risks.
+description: Use when reviewing 知了 diffs, branches, commits, PRs, release candidates, or documentation changes for product, architecture, test, browser acceptance, and deployment risks.
 ---
 
-# 智学伴代码审查流程
+# 知了代码审查流程
 
 ## 使用场景
 
-用于审查智学伴当前 diff、指定 commit、分支、PR、发布候选或文档变更。默认只输出审查报告和建议；除非用户明确要求修复，否则不要直接改代码。
+用于审查知了当前 diff、指定 commit、分支、PR、发布候选或文档变更。默认只输出审查报告和建议；除非用户明确要求修复，否则不要直接改代码。
 
 ## 必读材料
 
@@ -30,7 +30,7 @@ description: Use when reviewing 智学伴 diffs, branches, commits, PRs, release
 3. 按严重程度输出 findings first。
 4. 如果没有发现问题，也要说明检查范围、已验证证据、剩余风险和测试缺口。
 
-## 智学伴重点检查项
+## 知了重点检查项
 
 - **产品体验**：是否从学生/家长视角合理；是否出现 AI 自嗨总结、自动保存、自动执行。
 - **Agent 行为**：工具参数是否可信校验；计划是否先商量后确认；素材/笔记/错题是否保留用户确认。

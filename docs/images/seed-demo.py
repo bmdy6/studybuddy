@@ -7,7 +7,7 @@ from datetime import date,datetime,timedelta,timezone
 from pathlib import Path
 from app.database import SessionLocal
 from app.models import User,ChatSession,ChatMessage,StudyPlanDraft
-from app.models.p2 import StudentAttribute,StudyPlan,StudyPlanItem,StudyPlanItemAttempt
+from app.models.p2 import StudentAttribute,StudyPlan,StudyPlanItem,StudyPlanItemAttempt,LearningFeedback
 from app.utils.security import hash_password,create_access_token
 from app.config import settings
 assert settings.DB_HOST=='127.0.0.1' and settings.DB_NAME=='readme_demo_test', 'Disposable README database only'
@@ -43,13 +43,37 @@ with SessionLocal() as db:
     from app.models.teacher_student import TeacherStudent
     from app.models.note import Note
     from app.features.wechat.guardian import build_parent_daily_summary
+    from app.features.growth.guardian_today import build_guardian_today_learning_summary
+    from app.models.exam import Exam
+    from app.models.exam_record import ExamRecord
+    from app.models.question import Question
+    from app.models.error_book import ErrorBook
+    from app.models.exam_assignment import ExamAssignment
+    from decimal import Decimal
     parent=User(username='readme_parent', display_name='演示家长', password_hash=hash_password('synthetic-demo-only'), role='teacher')
     db.add(parent); db.flush()
     db.add(TeacherStudent(teacher_id=parent.id, student_id=user.id))
-    db.add(Note(student_id=user.id, title='分数练习 · 今日回顾', subject='数学', category='每日回顾', source='每日回顾', status='confirmed', content='## 今天的练习\n练习了同分母分数相加，用图解释 1/5 + 2/5 = 3/5。\n\n## 需要督促的地方\n已完成分数加法口头解释，明天继续画图核对单位分数；这些都是虚构演示记录。'))
+    db.add(Note(student_id=user.id, title='分数练习 · 今日回顾', subject='数学', category='每日回顾', source='每日回顾', status='confirmed', content='## 今天的练习\n练习了同分母分数相加，用图解释 1/5 + 2/5 = 3/5。\n\n## 需要督促的地方\n用时记录（自报）：画图解释 15 分钟、通分练习 20 分钟、错题复盘 15 分钟。\n错题复盘：把 1/2 + 1/3 误算成 2/5，已重新画图并通分，得到 5/6；分子分母不能分别相加。'))
     db.add(Note(student_id=user.id, title="分数加法 · 单位分数", subject="数学", category="基础概念", source="其他", status="confirmed", content="# 同分母分数相加\n每一份的大小不变，只把份数相加。\n\n1/5 + 2/5 = 3/5（虚构演示笔记）。"))
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    finished = StudyPlan(student_id=user.id, created_by=user.id, title='分数专项', planned_date=date.today(), status='completed')
+    db.add(finished); db.flush()
+    for index, (title, minutes) in enumerate([('单位分数画图解释', 15), ('异分母分数通分练习', 20), ('分数加法错题复盘', 15)]):
+        db.add(StudyPlanItem(plan_id=finished.id, title=title, minutes=minutes, status='done', sort_order=index, completed_at=now-timedelta(minutes=5-index)))
+        db.add(LearningFeedback(student_id=user.id, feedback_type='duration', content=f'{title}学习了{minutes}分钟', created_at=now-timedelta(minutes=5-index)))
+    exam = Exam(title='分数单元小测', subject='数学', status='published', created_by=parent.id)
+    db.add(exam); db.flush()
+    record = ExamRecord(exam_id=exam.id, student_id=user.id, status='graded', total_score=Decimal('86'), submitted_at=now-timedelta(minutes=2))
+    db.add(record); db.flush()
+    db.add(ExamAssignment(exam_id=exam.id, student_id=user.id, assigned_by=parent.id, status='submitted'))
+    for tag, stem, answer in [('通分', '计算 1/2 + 1/3，并说明如何通分。', '5/6'), ('单位分数', '解释为什么 1/5 + 2/5 的分母保持不变。', '每一份的大小不变')]:
+        question = Question(exam_id=exam.id, type='math_answer', stem=stem, answer_json={'answer':answer}, score=Decimal('7'), knowledge_tags=[tag])
+        db.add(question); db.flush()
+        db.add(ErrorBook(student_id=user.id, question_id=question.id, exam_record_id=record.id, knowledge_tags=[tag], error_count=3, last_wrong_at=now-timedelta(minutes=3)))
+    db.add(Note(student_id=user.id, title='通分错题复盘', subject='数学', category='错题复盘', source='错题讲解', status='confirmed', knowledge_tags=['通分'], content='1/2 + 1/3 不能写成 2/5；通分为 3/6 + 2/6 = 5/6，已用图核对。'))
     db.commit()
     (Path(__file__).parent/'parent-summary.txt').write_text(build_parent_daily_summary(db, parent.id))
+    (Path(__file__).parent/'parent-query.txt').write_text(build_guardian_today_learning_summary(db, user.id))
     token=create_access_token(user.id,user.role)
     target=Path(__file__).parent
     for name,session_id,is_task in [('plan',main.id,False),('task',task.id,True)]:

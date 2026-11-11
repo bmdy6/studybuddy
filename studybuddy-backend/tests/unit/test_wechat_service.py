@@ -446,7 +446,8 @@ def test_guardian_duration_question_sends_short_today_summary_without_agent(db: 
     ]
 
 
-def test_guardian_today_query_runs_real_summary_from_db_not_mocked(db: Session, monkeypatch) -> None:
+@pytest.mark.parametrize("question", ["今天学了多久", "今天学得怎么样"])
+def test_guardian_today_query_runs_real_summary_from_db_not_mocked(db: Session, monkeypatch, question) -> None:
     """集成测试：家长问'今天学了多久'时，走真实 DB 查询 + 真实摘要函数，
     只 mock send_ilink_text 避免真实发消息。验证路由命中、绑定校验、真实输出链路。
 
@@ -499,7 +500,7 @@ def test_guardian_today_query_runs_real_summary_from_db_not_mocked(db: Session, 
         lambda bot, user, text: sent.append((bot, user, text)) or "success",
     )
 
-    asyncio.run(inbound.process_guardian_agent_message(account.id, student.id, "今天学了多久"))
+    asyncio.run(inbound.process_guardian_agent_message(account.id, student.id, question))
 
     assert len(sent) == 1
     reply_text = sent[0][2]
@@ -510,7 +511,7 @@ def test_guardian_today_query_runs_real_summary_from_db_not_mocked(db: Session, 
 
 @pytest.mark.parametrize(
     "content",
-    ["今天学了什么", "今天学习了什么", "今天学习的内容", "今日做了什么"],
+    ["今天学了什么", "今天学习了什么", "今天学习的内容", "今日做了什么", "今天学得怎么样"],
 )
 def test_guardian_today_content_questions_use_short_summary_intent(content: str) -> None:
     assert wechat_guardian._is_guardian_today_learning_query(content) is True

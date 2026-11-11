@@ -1,9 +1,9 @@
 ---
 name: zhixueban-pr-submitter
-description: Use when submitting a 智学伴 PR — committing, pushing, and creating a pull request on GitHub. Triggered by "提交 PR""发 PR""按规范提交""提个 PR". Never auto-merges; human reviews and merges.
+description: Use when submitting a 知了 PR — committing, pushing, and creating a pull request on GitHub. Triggered by "提交 PR""发 PR""按规范提交""提个 PR". Never auto-merges; human reviews and merges.
 ---
 
-# 智学伴提交 PR 流程
+# 知了提交 PR 流程
 
 ## 使用场景
 

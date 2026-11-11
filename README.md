@@ -1,6 +1,6 @@
 <div align="center">
   <img src="studybuddy-client/public/icons/icon-192.png" width="96" alt="知了应用图标">
-  <h1>知了 · 智学伴（StudyBuddy）</h1>
+  <h1>知了（StudyBuddy）</h1>
   <p><strong>孩子知道第一步做什么，家长在微信里看见孩子学了什么。</strong></p>
   <p>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-blue" alt="AGPL-3.0"></a>
@@ -33,10 +33,17 @@
 
 **学生学习 → 系统汇总当日记录 → Bot 按家长设置的时间推送。**
 
-<p align="center"><img src="docs/images/wechat-daily-demo.png" width="380" alt="用虚构学生记录生成的家长日报聊天气泡示意"></p>
-<p align="center">微信日报「示意」：文本由 <code>build_parent_daily_summary</code> 读取虚构记录生成，气泡由脚本渲染；不是微信客户端实发截图。</p>
+<p align="center"><img src="docs/images/wechat-conversation-demo.png" width="480" alt="家长主动问今天学得怎么样，Bot 回复学情，晚上再收到定时日报的对话示意"></p>
+<p align="center">微信对话示意，全部使用虚构数据；主动回复由 <code>build_guardian_today_learning_summary</code> 生成，晚间日报由 <code>build_parent_daily_summary</code> 生成，均为真实代码输出，经脚本渲染，非微信实发截图。</p>
 
-学生在「个人中心 → 微信学习助手」扫码连接 Bot，再邀请家长绑定。家长可以查询学情、选择孩子、设置推送时间。日报使用学习记录和证据；iLink 家长通道还支持当天学习摘要与成长汇报。定时发送需要自己配置调度器，并受微信互动窗口、配额和账号状态限制；不是绑定后就能无限主动推送。
+学生在「个人中心 → 微信学习助手」扫码连接 Bot，再邀请家长绑定。家长可以查询学情、选择孩子、设置推送时间。日报使用学习记录和证据；iLink 家长通道还支持当天学习摘要与成长汇报。
+
+<details>
+<summary>边界与说明</summary>
+
+定时日报需自配调度，并受微信互动窗口、配额及账号状态限制。
+
+</details>
 
 ## 还有这些功能
 

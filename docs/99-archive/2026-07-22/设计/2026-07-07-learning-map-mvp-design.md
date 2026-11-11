@@ -10,7 +10,7 @@ priority: P1
 
 ## 背景
 
-智学伴当前已经具备几块关键资产：
+知了当前已经具备几块关键资产：
 
 - 错题本：`error_book.knowledge_tags`、错题次数、最近错题时间。
 - 复盘笔记：`notes.knowledge_tags`、`category=错题复盘`、`source_ref=[error_book.id]`。

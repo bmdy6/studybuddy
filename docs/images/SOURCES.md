@@ -7,7 +7,9 @@
 - `task-session.png`：桌面任务对话与作答，1280×800。
 - `resume.png`：计划管理页，1280×800。
 - `mobile-task.png`、`mobile-plan.png`、`mobile-notes.png`：手机端真实页面，390×844。
-- `wechat-daily-demo.png`：**微信聊天示意**；`build_parent_daily_summary` 从虚构家长与学生关系、计划和每日回顾生成正文，Playwright 将文本渲染为气泡。不是微信实际投递截图。
+- `wechat-daily-demo.png`：**微信聊天示意**；`build_parent_daily_summary` 从虚构家长与学生关系、3 项完成任务、3 条时长反馈、2 个薄弱点、错题复盘和 86 分试卷生成正文，Playwright 将文本渲染为气泡。不是微信实际投递截图。
+- `wechat-conversation-demo.png`：**微信对话示意**；家长问「今天学得怎么样」后，先展示 `build_guardian_today_learning_summary` 的真实输出，再展示 `build_parent_daily_summary` 的晚间日报；虚构数据说明只在气泡外，两张图分别用于 README 功能表格和微信章节。
+- `parent-summary.txt`、`parent-query.txt`：种子脚本直接保存的服务输出，不由截图脚本编写；时长来自学生自报，不以计划预计分钟冒充实际用时。
 - `landing.png`：本次恢复的官网真实页面，1440px；Hero 中三张图同样来自上述合成数据手机页面。
 
 `capture-receipt.json` 记录 Chromium 版本、应用路由、视口和图片 SHA-256。`illustrate.json` 是本次文件清单，替换旧的 README 插图块说明。

@@ -2,7 +2,7 @@
 
 ## 目标
 
-使用一个真实 iLink Bot 账号服务所有学生和家长。Bot 负责微信消息入口，智学伴继续负责账号、亲子关系、学情和提醒。不同微信用户的绑定、消息、登录链接、业务数据和 context token 必须隔离。
+使用一个真实 iLink Bot 账号服务所有学生和家长。Bot 负责微信消息入口，知了继续负责账号、亲子关系、学情和提醒。不同微信用户的绑定、消息、登录链接、业务数据和 context token 必须隔离。
 
 ## 已确认决策
 
@@ -10,7 +10,7 @@
 - 整个微服务只运行一个共享 `WeixinAdapter`，不为每个用户创建 adapter。
 - 用户扫码确认后进入三分钟临时白名单；发送正确绑定码后升级为长期白名单。
 - 用户解绑后移出长期白名单，再次绑定必须重新扫码。
-- Bot token 和 context token 使用 Hermes 文件存储，不进入智学伴数据库。
+- Bot token 和 context token 使用 Hermes 文件存储，不进入知了数据库。
 - context token 由 Hermes 按 `ilink_bot_id + ilink_user_id` 隔离。
 
 ## 身份模型
@@ -20,7 +20,7 @@
 | 微信渠道 | `channel=ilink_bot` | 与公众号历史绑定隔离 |
 | 共享 Bot | `provider_account_id=ilink_bot_id` | 标识唯一 Bot 账号 |
 | 微信用户 | `ilink_user_id` / `wechat_accounts.openid` | 标识 Bot 下的独立用户 |
-| 智学伴账号 | `wechat_accounts.user_id` | 业务权限和数据归属 |
+| 知了账号 | `wechat_accounts.user_id` | 业务权限和数据归属 |
 | 渠道会话 | `provider_account_id + ilink_user_id` | 消息和 context token 隔离键 |
 
 该模型参考公司项目的通用渠道设计：`provider_account_id` 表示共享渠道账号，外部用户 ID 表示该账号下的用户，业务记忆最终按内部用户 ID 隔离。MVP 不复制公司的通用会话平台，只采用这组身份边界。
@@ -34,14 +34,14 @@
 - 保存唯一 Bot 凭证并运行一个 `WeixinAdapter`。
 - 维护临时白名单和已绑定用户白名单。
 - 在转发入站消息前校验白名单。
-- 将允许的文本消息转发给智学伴后端并回复一条文本；后端可通知微服务升级或移除该用户白名单。
+- 将允许的文本消息转发给知了后端并回复一条文本；后端可通知微服务升级或移除该用户白名单。
 - 接收后端主动发送请求，发送前再次校验目标用户仍在长期白名单。
 - 将 provider 结果归一化为成功、窗口失效、会话失效或普通失败。
 - 服务重启时恢复一个 adapter、Hermes context token 和有效用户白名单。
 
 微服务不访问 MySQL，不查询学情，不判断亲子关系，不调用 Agent、LLM 或记忆系统。
 
-### 智学伴后端
+### 知了后端
 
 - 继续管理三分钟绑定码、一次性 H5 token、30 天 JWT 和 `teacher_students`。
 - 保存 `channel + provider_account_id + ilink_user_id` 到现有微信表。
@@ -64,7 +64,7 @@
 ```
 
 - 临时白名单只存在于微服务内存，并绑定授权会话和到期时间。
-- 长期白名单以智学伴后端 active 绑定为唯一事实来源。
+- 长期白名单以知了后端 active 绑定为唯一事实来源。
 - 未进入临时或长期白名单的消息在微服务第一层丢弃，不转发业务后端。
 - Hermes adapter 可以接收入站事件，但不能把 adapter 自带的单用户 `allow_from` 当成动态白名单。
 - 白名单变化不重建 adapter，避免打断其他用户的长轮询。
@@ -106,7 +106,7 @@ Bot 微服务保留五类最小接口：
 - 移除指定用户白名单。
 - 查询健康状态；运维停服时才停用共享 adapter。
 
-智学伴后端提供：
+知了后端提供：
 
 - 接收入站微信文本并返回一条确定性回复。
 - 返回共享 Bot ID 和全部有效 `ilink_user_id`，供重启恢复长期白名单。

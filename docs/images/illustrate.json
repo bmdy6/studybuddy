@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "sources": "docs/images/SOURCES.md",
   "synthetic": true,
   "model_calls": 0,
@@ -10,11 +10,11 @@
     },
     {
       "file": "docs/images/plan-confirm.png",
-      "sha256": "73402db1011bf01ce5aa6f60957b9b7b94c766e330a5411ba75a4bde0b44efc1"
+      "sha256": "b93e3a23ad2790196002bfed8ce558fd27fc9e3a11cd0196cf754495ef172e8f"
     },
     {
       "file": "docs/images/task-session.png",
-      "sha256": "bd91d63ff75a43964204631eddd7017af46f0f85e828875e8985c94a3913d1d9"
+      "sha256": "6a3ced0a677d577ac75cd8053d8c79e3ffe3f3a87376aead91f9f776c4731c50"
     },
     {
       "file": "docs/images/resume.png",
@@ -22,7 +22,7 @@
     },
     {
       "file": "docs/images/mobile-task.png",
-      "sha256": "54325f0fad10db7614c314b5666047e227e64ae39c8cfee5cc2827ae443a2b13"
+      "sha256": "89058b951bfcc37b46780bafc8bf00fce17c256d09f599d26081c69f16da6bb9"
     },
     {
       "file": "docs/images/mobile-plan.png",
@@ -30,15 +30,19 @@
     },
     {
       "file": "docs/images/mobile-notes.png",
-      "sha256": "15573229032d6a81c756c336b21291146d4f6191a5f1db5259c6dc42e7bd564c"
+      "sha256": "201d8f06547c7d8af6397052856686adb5db87365b907d614ee81c6400233a2e"
     },
     {
       "file": "docs/images/wechat-daily-demo.png",
-      "sha256": "4159619e4c88a26958a8594853b517c045d6c2486f609c065c6cf12210f967f8"
+      "sha256": "b85381db7f0fcfc1dd6ddad770732adff87cc2b112df30f870f568bca68675e7"
     },
     {
       "file": "docs/images/landing.png",
-      "sha256": "5c248b83d89dd1a2e10a2d1ebc76d23e959251c8e369c60e4795a5c3371e453d"
+      "sha256": "5c651aa0f944003d59fc082428b2c959f08f23127e4052b4855d7882ad7d19a0"
+    },
+    {
+      "file": "docs/images/wechat-conversation-demo.png",
+      "sha256": "683fbe7b7e61c9762f9d9c16ca05d9e7c119a8e42b63085699527d7995f7172d"
     }
   ]
 }
