@@ -43,6 +43,18 @@
     {
       "file": "docs/images/wechat-conversation-demo.png",
       "sha256": "683fbe7b7e61c9762f9d9c16ca05d9e7c119a8e42b63085699527d7995f7172d"
+    },
+    {
+      "file": "docs/images/readme-github.png",
+      "sha256": "a497ea4a6d7c0ce225ab92fe27a9a9c447ed0311bd3c33d379874101e3b9a0b6"
+    },
+    {
+      "file": "docs/images/readme-github-features.png",
+      "sha256": "3f28f41aabdbc0ef91e01c84cf5d0b81ed9189e13f7181fbfcc4527072c9ffe0"
+    },
+    {
+      "file": "docs/images/readme-github-architecture.png",
+      "sha256": "31deefa7b601c35fb998e7fb740f82b787cfa4aae9888fd7e4c2a8b623f66ca0"
     }
   ]
 }

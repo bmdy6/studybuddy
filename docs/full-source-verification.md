@@ -44,3 +44,20 @@ Headless Chromium 149.0.7827.55 实际访问 React → FastAPI → MySQL：
 没有部署、数据迁移、真实模型、真实微信扫码/投递、COS、外部搜索或 OCR 供应商端到端验收。Bot 的扫码状态机、鉴权、恢复、白名单和消息状态由合成适配器测试。修复空内部 token 时先复现 4 failed / 23 passed，再实现校验，最终 27 passed。
 
 已用 headless Chromium 打开 GitHub 分支 README：13 张图片加载成功，三列表格为 3 列，Mermaid iframe 实际生成 SVG 并含 React 节点。首屏、表格和架构图截图见 `docs/images/readme-github*.png`；PR 地址与远端 CI 状态在本地交付记录回读确认。
+
+
+## PR #4 第二轮复验（2026-11-11）
+
+统一产品名为「知了」，README 标题为「知了（StudyBuddy）」；全部已跟踪文件内容与路径的旧中文名检索为 0，仓库描述和 PR 标题也已回读确认。历史文档、清单里的名称统一更新，未重写 Git 历史；清单注明历史路径的命名归一化。
+
+- 后端完整 pytest：**1310 passed, 50 skipped**，435.24 秒；50 项仍全部是未授权的 live 模型用例。新增 7 个用例覆盖真实提问入口、丰富日报、学生归属、未批改/空分数/零分与空态。
+- 相关后端子集：**68 passed**；前端 **52 files / 342 passed**，lint、typecheck、主应用 build 和 build:landing 全部通过。
+- 微信 Bot：**27 passed**；HobbyBuddy 后端：**10 passed**。本轮未改 HobbyBuddy 客户端，沿用首轮构建结果。
+- headless Chromium 再验真实 UI 确认并持久化计划、手机任务刷新、关闭微信时主流程无微信请求、官网 320/768/1024/1440px 无横向溢出，全部通过。
+- 一次性 `mysql:8.4` 实例绑定 `127.0.0.1:33384`，tmpfs 数据目录，只使用 `studybuddy_r2_test` 和 `readme_demo_test`。未使用个人/生产数据库；真实模型调用 **0**。
+- `build_parent_daily_summary` 生成的日报含 3 项完成任务、15/20/15 分钟自报用时、2 个薄弱点、通分错题复盘、86 分最近试卷与明天建议。图片不手写业务正文；虚构说明只出现在气泡外。
+- 表格使用独立日报图，微信章节使用新对话图：家长问「今天学得怎么样」→ `build_guardian_today_learning_summary` 回复 → 晚间日报；入口集成测试禁止调用 Agent，真实查询和回复代码均运行。
+- 已重拍受影响图片及 GitHub 实际渲染：13 张 README 图片加载、三列表格、Mermaid SVG 均正常，旧标题不再出现；限制说明压成 details 内一句。
+- 全工作树 gitleaks：**0 findings**；合成登录 JWT 状态文件已删除，`git diff --check` 通过。原只读仓库的两处未提交文档保持不变。
+
+依旧未做部署、真实微信扫码/投递或真实模型调用。示意图证明确定性代码和虚构记录的展示效果，不证明模型教学效果。
