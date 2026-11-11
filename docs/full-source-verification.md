@@ -43,4 +43,4 @@ Headless Chromium 149.0.7827.55 实际访问 React → FastAPI → MySQL：
 
 没有部署、数据迁移、真实模型、真实微信扫码/投递、COS、外部搜索或 OCR 供应商端到端验收。Bot 的扫码状态机、鉴权、恢复、白名单和消息状态由合成适配器测试。修复空内部 token 时先复现 4 failed / 23 passed，再实现校验，最终 27 passed。
 
-GitHub README 的图片、表格与 Mermaid 渲染截图及 PR 地址在交付记录中另行回读确认；不把本地 Markdown 预览算作 GitHub 渲染证据。
+已用 headless Chromium 打开 GitHub 分支 README：13 张图片加载成功，三列表格为 3 列，Mermaid iframe 实际生成 SVG 并含 React 节点。首屏、表格和架构图截图见 `docs/images/readme-github*.png`；PR 地址与远端 CI 状态在本地交付记录回读确认。

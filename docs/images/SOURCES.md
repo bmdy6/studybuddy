@@ -12,6 +12,8 @@
 
 `capture-receipt.json` 记录 Chromium 版本、应用路由、视口和图片 SHA-256。`illustrate.json` 是本次文件清单，替换旧的 README 插图块说明。
 
+`readme-github.png`、`readme-github-features.png`、`readme-github-architecture.png` 是 GitHub 分支 README 的实际渲染截图（公开页面、未登录），分别记录首屏、表格与 Mermaid；与应用截图分别使用。
+
 ## 复现
 
 新建一次性 MySQL 实例和空库 `readme_demo_test`，专用本机端口及账号。不要使用任何已有个人或生产数据库。
