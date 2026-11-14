@@ -15,6 +15,8 @@
   <img src="docs/images/overview.png" width="960" alt="Daily plans and resume-learning entry points in the real app, using entirely fictional data">
 </div>
 
+[Quick start](#quick-start) · [WeChat reports](#let-parents-see-a-day-of-learning-in-wechat) · [Model configuration](#model-configuration)
+
 ## Why build this
 
 Sometimes children want to learn but do not know where to start. A small task they can begin immediately is often more helpful than a long checklist. When parents cannot see the learning process, they end up asking and reminding repeatedly. I wanted a tool that connects starting, leaving a record, and continuing next time, while giving parents more visibility through WeChat.
@@ -181,4 +183,4 @@ Without a key, model requests explicitly fail rather than producing fake answers
 
 This is a self-hosted project requiring your own model key. AI explanations, grading, and completion assessments need review, cannot prove mastery, and do not promise improved grades. Deployers are responsible for HTTPS, access control, backups, and upload permissions on public deployments.
 
-[Testing](docs/testing.md) · [Verification for this release](docs/full-source-verification.md) · [Source boundaries and excluded components](docs/source-boundary.md) · [Screenshot sources and reproduction](docs/images/SOURCES.md) · [Third-party dependencies](THIRD_PARTY_NOTICES.md) · [AGPL-3.0-only](LICENSE)
+[Testing](docs/testing.md) · [Verification record](docs/full-source-verification.md) · [Provenance and feature boundaries](docs/source-boundary.md) · [Screenshot sources and reproduction](docs/images/SOURCES.md) · [Third-party dependencies](THIRD_PARTY_NOTICES.md) · [AGPL-3.0-only](LICENSE)

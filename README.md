@@ -15,6 +15,8 @@
   <img src="docs/images/overview.png" width="960" alt="真实应用中的每日计划与继续学习入口，全部为虚构数据">
 </div>
 
+[快速开始](#快速开始) · [微信日报](#家长在微信里看见一天的学习) · [模型配置](#模型配置)
+
 ## 为什么做这个
 
 有时孩子不是不想学，而是不知道第一步该做什么。一份很长的任务清单，往往还不如一个能马上开始的小任务。家长看不见学习过程，只能反复问、反复催。我想做一个把「开始、留下记录、下次继续」连起来的工具，也让家长在微信里多看见一点过程。
@@ -181,4 +183,4 @@ reasoning_effort: none
 
 这是自托管项目，需要自己的模型 key。AI 的讲解、批改和完成判定都需要核对，不能作为已经掌握知识的证明，也不承诺提分。公开部署的 HTTPS、访问控制、备份和上传文件权限由部署者负责。
 
-[测试说明](docs/testing.md) · [本次验证](docs/full-source-verification.md) · [源码边界与未搬清单](docs/source-boundary.md) · [截图来源与复现](docs/images/SOURCES.md) · [第三方依赖](THIRD_PARTY_NOTICES.md) · [AGPL-3.0-only](LICENSE)
+[测试说明](docs/testing.md) · [验证记录](docs/full-source-verification.md) · [来源与功能边界](docs/source-boundary.md) · [截图来源与复现](docs/images/SOURCES.md) · [第三方依赖](THIRD_PARTY_NOTICES.md) · [AGPL-3.0-only](LICENSE)
