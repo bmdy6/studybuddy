@@ -1,3 +1,5 @@
+低维护：作为作品展示，Issue 可能不及时回复
+
 [简体中文](README.md) | [English](README.en.md)
 
 <div align="center">
